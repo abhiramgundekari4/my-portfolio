@@ -65,7 +65,7 @@ export const portfolioData: PortfolioData = {
   certifications: [
     {
       name: 'Complete UNIX & Linux OS Fundamentals Training',
-      issuer: 'Certificate Issuer',
+      issuer: 'Infosys',
       date: 'September 2024',
       url: '/unix-linux-certificate.pdf', 
     },
