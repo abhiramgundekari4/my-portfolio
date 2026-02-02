@@ -19,17 +19,17 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
     <section id="home" className="relative h-[90vh] min-h-[600px] overflow-hidden bg-primary/5 py-20 md:py-32">
         <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
-                <div className="space-y-6 text-center md:text-left">
+                <div className="space-y-6 text-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
                         {name}
                     </h1>
                     <p className="font-headline text-xl font-medium text-accent md:text-2xl">
                         {title}
                     </p>
-                    <p className="max-w-xl text-lg text-muted-foreground mx-auto md:mx-0">
+                    <p className="max-w-xl text-lg text-muted-foreground mx-auto">
                         {summary}
                     </p>
-                    <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
                         <Button asChild size="lg">
                             <a href="/resume.pdf" download>
                                 <Download className="mr-2 h-5 w-5" />
@@ -43,7 +43,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                             </Link>
                         </Button>
                     </div>
-                    <div className="flex justify-center space-x-4 md:justify-start">
+                    <div className="flex justify-center space-x-4">
                         <Button asChild variant="ghost" size="icon">
                             <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                 <Github className="h-6 w-6" />
