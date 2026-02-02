@@ -80,6 +80,12 @@ export const portfolioData: PortfolioData = {
       issuer: 'Certificate Issuer',
       date: 'September 2024',
       url: '/unix-linux-certificate.pdf', 
+    },
+    {
+      name: 'Matrix Algebra for Engineers',
+      issuer: 'Coursera',
+      date: 'April 2024',
+      url: 'https://coursera.org/verify/4AMMD32RY7U7',
     }
   ],
   achievements: [
