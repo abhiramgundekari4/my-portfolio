@@ -7,10 +7,11 @@ export function AcademicsSection() {
   return (
     <section id="academics" className="container mx-auto scroll-mt-20 px-4 py-16">
       <SectionTitle icon={Trophy}>Academics & Achievements</SectionTitle>
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="mx-auto max-w-4xl space-y-12">
+        {/* Education Section */}
         <div>
           <h3 className="mb-4 font-headline text-2xl font-semibold text-primary">Education</h3>
-          <Card className="mb-6">
+          <Card>
             <CardHeader>
               <CardTitle>{portfolioData.education.degree}</CardTitle>
               <p className="text-muted-foreground">{portfolioData.education.institution}</p>
@@ -24,7 +25,10 @@ export function AcademicsSection() {
               </ul>
             </CardContent>
           </Card>
-          
+        </div>
+        
+        {/* Certifications Section */}
+        <div>
           <h3 className="mb-4 font-headline text-2xl font-semibold text-primary">Certifications</h3>
           <div className="space-y-4">
             {portfolioData.certifications.map((cert, index) => (
@@ -45,30 +49,29 @@ export function AcademicsSection() {
           </div>
         </div>
         
-        <div className="space-y-8">
-          {portfolioData.achievements.map((achievementCategory, index) => (
-            <div key={index}>
-              <h3 className="mb-4 font-headline text-2xl font-semibold text-primary">
-                {achievementCategory.category}
-              </h3>
-              <Card>
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    {achievementCategory.items.map((item, itemIndex) => (
-                       <div key={itemIndex} className="flex items-start gap-4">
-                        <achievementCategory.icon className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
-                        <div>
-                          <p className="font-semibold">{item.title}</p>
-                          <p className="text-sm text-muted-foreground">{item.description}</p>
-                        </div>
+        {/* Achievements & Communication Sections */}
+        {portfolioData.achievements.map((achievementCategory, index) => (
+          <div key={index}>
+            <h3 className="mb-4 font-headline text-2xl font-semibold text-primary">
+              {achievementCategory.category}
+            </h3>
+            <Card>
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  {achievementCategory.items.map((item, itemIndex) => (
+                     <div key={itemIndex} className="flex items-start gap-4">
+                      <achievementCategory.icon className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                      <div>
+                        <p className="font-semibold">{item.title}</p>
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-        </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
       </div>
     </section>
   );
