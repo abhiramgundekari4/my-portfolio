@@ -6,12 +6,12 @@ export const portfolioData: PortfolioData = {
   name: 'Abhiram Gundekari',
   title: 'Python & SQL Developer | DSA Enthusiast',
   contact: {
-    email: 'hello@portfoliopro.dev',
-    phone: '+1 (123) 456-7890',
+    email: 'abhiramgundekari4@gmail.com',
+    phone: '7993979070',
   },
   socials: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com/in',
+    github: 'https://github.com/2303A51087',
+    linkedin: 'https://www.linkedin.com/in/abhiram-gundekari-56a740295/',
   },
   skills: [
     {
