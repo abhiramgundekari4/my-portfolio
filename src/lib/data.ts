@@ -76,27 +76,13 @@ export const portfolioData: PortfolioData = {
       url: 'https://coursera.org',
     },
     {
-      name: 'Your Certificate Name',
+      name: 'Complete UNIX & Linux OS Fundamentals Training',
       issuer: 'Certificate Issuer',
-      date: 'Month Year',
-      url: '/your-certificate.pdf', 
+      date: 'September 2024',
+      url: '/unix-linux-certificate.pdf', 
     }
   ],
   achievements: [
-    {
-        category: "Achievements",
-        icon: Trophy,
-        items: [
-            {
-                title: "CodeChampion 2023 - 1st Place",
-                description: "Won first place in a national level competitive programming contest."
-            },
-            {
-                title: "Hack-a-thon 2022 - Best Project",
-                description: "Our team won the best project award for developing a solution for urban traffic management."
-            }
-        ]
-    },
     {
         category: "Languages",
         icon: Languages,
