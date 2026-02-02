@@ -3,7 +3,7 @@ import { Code, BrainCircuit, Database, Trophy, Languages } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
-  name: 'PortfolioPro',
+  name: 'Abhiram Gundekari',
   title: 'Python & SQL Developer | DSA Enthusiast',
   contact: {
     email: 'hello@portfoliopro.dev',
