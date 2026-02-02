@@ -54,13 +54,12 @@ export const portfolioData: PortfolioData = {
     },
   ],
   education: {
-    institution: 'University of Technology',
+    institution: 'SR University',
     degree: 'Bachelor of Science in Computer Science',
-    period: '2021 - 2025',
+    period: '2023 - 2027',
     details: [
       'Concentration in Software Engineering and Data Science.',
-      'Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development.',
-      'Dean\'s List for 4 consecutive semesters.'
+      'Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development.'
     ],
   },
   certifications: [
