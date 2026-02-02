@@ -9,7 +9,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { portfolioData } from '@/lib/data';
 
 const aiInput: PortfolioSummaryInput = {
-    skills: 'Python, SQL, C, HTML, CSS, Data Structures & Algorithms, Problem Solving, Django, Flask, Pandas, NumPy, Scikit-learn, React, Next.js, Tailwind CSS, Git, Docker',
+    skills: 'Python, SQL, C, HTML, CSS, JavaScript, Pandas, NumPy, Node.js, React, Data Structures & Algorithms, Object-Oriented Programming (OOP), REST APIs, Git & GitHub, Docker',
     experience: 'I am a motivated Python developer with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.',
 };
 

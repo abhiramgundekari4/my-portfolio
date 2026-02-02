@@ -17,12 +17,12 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Languages & Databases',
       icon: Code,
-      skills: ['Python (Proficient)', 'SQL (Proficient)', 'C', 'HTML', 'CSS'],
+      skills: ['Python (Proficient)', 'SQL (Proficient)', 'C', 'HTML', 'CSS', 'JavaScript'],
     },
     {
       title: 'Frameworks & Libraries',
       icon: BrainCircuit,
-      skills: ['Django', 'Flask', 'Pandas, NumPy, Scikit-learn', 'React, Next.js', 'Tailwind CSS', 'Node.js'],
+      skills: ['Pandas', 'NumPy', 'Node.js', 'React'],
     },
     {
       title: 'Core Concepts & Tools',
