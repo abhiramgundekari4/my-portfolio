@@ -75,6 +75,12 @@ export const portfolioData: PortfolioData = {
       date: 'July 2023',
       url: 'https://coursera.org',
     },
+    {
+      name: 'Your Certificate Name',
+      issuer: 'Certificate Issuer',
+      date: 'Month Year',
+      url: '/your-certificate.pdf', 
+    }
   ],
   achievements: [
     {
