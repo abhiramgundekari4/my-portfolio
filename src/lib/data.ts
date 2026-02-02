@@ -64,18 +64,6 @@ export const portfolioData: PortfolioData = {
   },
   certifications: [
     {
-      name: 'Python for Everybody Specialization',
-      issuer: 'Coursera',
-      date: 'May 2023',
-      url: 'https://coursera.org',
-    },
-    {
-      name: 'SQL for Data Science',
-      issuer: 'Coursera',
-      date: 'July 2023',
-      url: 'https://coursera.org',
-    },
-    {
       name: 'Complete UNIX & Linux OS Fundamentals Training',
       issuer: 'Certificate Issuer',
       date: 'September 2024',
