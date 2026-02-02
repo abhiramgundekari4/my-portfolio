@@ -10,8 +10,7 @@ import { portfolioData } from '@/lib/data';
 
 const aiInput: PortfolioSummaryInput = {
     skills: 'Python, SQL, Data Structures & Algorithms, Problem Solving, Django, Flask, Pandas, NumPy, Scikit-learn, React, Next.js, Tailwind CSS, Git, Docker',
-    experience: 'A dedicated and hardworking student with a strong foundation in computer science. Developed several full-stack and data-focused projects, demonstrating the ability to quickly learn and apply new technologies to solve real-world problems. Proven ability to solve complex problems using Data Structures and Algorithms, with achievements in competitive programming.',
-    objective: 'To secure a challenging role as a Software Engineer or Data Scientist, applying my skills in software development and problem-solving to contribute to innovative projects and grow within a dynamic team.',
+    experience: 'I am a motivated Python developer with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.',
 };
 
 export default async function PortfolioPage() {
@@ -21,7 +20,7 @@ export default async function PortfolioPage() {
         summary = result.summary;
     } catch (error) {
         console.error("Failed to generate portfolio summary with AI. This may be due to a missing or invalid API key.", error);
-        summary = `${aiInput.experience} ${aiInput.objective}`;
+        summary = aiInput.experience;
     }
 
     return (
