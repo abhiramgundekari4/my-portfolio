@@ -1,5 +1,5 @@
 import { Icons } from '@/components/icons';
-import { Code, BrainCircuit, Database, Trophy, MessageCircle } from 'lucide-react';
+import { Code, BrainCircuit, Database, Trophy, Languages } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -93,16 +93,20 @@ export const portfolioData: PortfolioData = {
         ]
     },
     {
-        category: "Communication",
-        icon: MessageCircle,
+        category: "Languages",
+        icon: Languages,
         items: [
             {
-                title: "Tech Conference Speaker",
-                description: "Presented a talk on 'The rise of serverless computing' at a regional tech conference."
+                title: "English",
+                description: "Professional Working Proficiency"
             },
             {
-                title: "Technical Blogger",
-                description: "Authored several articles on advanced Python concepts and data structures on a personal blog."
+                title: "Telugu",
+                description: "Native or Bilingual Proficiency"
+            },
+            {
+                title: "Hindi",
+                description: "Professional Working Proficiency"
             }
         ]
     }
