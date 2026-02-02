@@ -29,6 +29,15 @@ export type Certification = {
   url: string;
 };
 
+export type Achievement = {
+    category: string;
+    icon: LucideIcon;
+    items: {
+        title: string;
+        description: string;
+    }[];
+};
+
 export type PortfolioData = {
   name: string;
   title: string;
@@ -44,4 +53,5 @@ export type PortfolioData = {
   projects: Project[];
   education: AcademicRecord;
   certifications: Certification[];
+  achievements: Achievement[];
 };

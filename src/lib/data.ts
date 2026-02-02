@@ -1,5 +1,5 @@
 import { Icons } from '@/components/icons';
-import { Code, BrainCircuit, Database } from 'lucide-react';
+import { Code, BrainCircuit, Database, Trophy, MessageCircle } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -76,5 +76,35 @@ export const portfolioData: PortfolioData = {
       date: 'July 2023',
       url: 'https://coursera.org',
     },
+  ],
+  achievements: [
+    {
+        category: "Achievements",
+        icon: Trophy,
+        items: [
+            {
+                title: "CodeChampion 2023 - 1st Place",
+                description: "Won first place in a national level competitive programming contest."
+            },
+            {
+                title: "Hack-a-thon 2022 - Best Project",
+                description: "Our team won the best project award for developing a solution for urban traffic management."
+            }
+        ]
+    },
+    {
+        category: "Communication",
+        icon: MessageCircle,
+        items: [
+            {
+                title: "Tech Conference Speaker",
+                description: "Presented a talk on 'The rise of serverless computing' at a regional tech conference."
+            },
+            {
+                title: "Technical Blogger",
+                description: "Authored several articles on advanced Python concepts and data structures on a personal blog."
+            }
+        ]
+    }
   ]
 };
