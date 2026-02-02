@@ -17,7 +17,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Languages & Databases',
       icon: Code,
-      skills: ['Python (Proficient)', 'SQL (Proficient)', 'JavaScript/TypeScript', 'PostgreSQL', 'MySQL', 'MongoDB'],
+      skills: ['Python (Proficient)', 'SQL (Proficient)', 'C', 'HTML', 'CSS'],
     },
     {
       title: 'Frameworks & Libraries',
