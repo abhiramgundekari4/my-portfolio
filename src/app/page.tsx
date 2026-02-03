@@ -10,7 +10,7 @@ import ContributionGraph from '@/components/github-contribution-graph';
 import { SectionTitle } from '@/components/ui/section-title';
 import { Github } from 'lucide-react';
 
-const summaryText = 'I am a motivated Computer Science student at SR University (2023-2027) with a strong foundation in Python and SQL. I have successfully completed two virtual internships at EduSkills Foundation and holds certifications from Infosys (UNIX & Linux) and Coursera (Matrix Algebra). I enjoy building logical, data-driven solutions.';
+const summaryText = 'I am a motivated student with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.';
 
 export default function PortfolioPage() {
     return (
