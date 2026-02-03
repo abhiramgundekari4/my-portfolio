@@ -68,12 +68,12 @@ export const portfolioData: PortfolioData = {
         icon: Briefcase,
         items: [
             {
-                title: "Internship Certificate 1",
-                description: "Completed professional internship training and received certification for outstanding performance."
+                title: "Virtual Internship 1 - EduSkills Foundation",
+                description: "Successfully completed a corporate-aligned virtual internship program focusing on emerging technologies."
             },
             {
-                title: "Internship Certificate 2",
-                description: "Successfully completed professional internship program focused on technical development."
+                title: "Virtual Internship 2 - EduSkills Foundation",
+                description: "Completed an intensive virtual internship focused on practical technical skill development and industry standards."
             }
         ]
     },
