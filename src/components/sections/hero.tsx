@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Download, Send, Github, Linkedin, User } from 'lucide-react';
 import { portfolioData } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type HeroSectionProps = {
   name: string;
@@ -15,7 +14,6 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ name, title, summary }: HeroSectionProps) {
-  const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
   const [imageError, setImageError] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -66,14 +64,12 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                 </div>
                 <div className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96">
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
-                        {mounted && profileImage && !imageError ? (
+                        {mounted && !imageError ? (
                             <Image
-                                src={profileImage.imageUrl}
+                                src="/profile.jpg"
                                 alt={name}
                                 fill
                                 priority
-                                sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
-                                data-ai-hint={profileImage.imageHint}
                                 className="object-cover"
                                 onError={() => setImageError(true)}
                             />

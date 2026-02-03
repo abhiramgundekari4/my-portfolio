@@ -33,8 +33,8 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: 'Student Services Portal',
-      description: 'A comprehensive web application designed to streamline university services, allowing students to manage courses, view grades, and access campus resources efficiently. Implemented robust data management using SQL.',
-      tags: ['Python', 'Django', 'PostgreSQL', 'SQL', 'Bootstrap'],
+      description: 'A dedicated web portal developed using HTML and CSS. This platform streamlines university operations by integrating external academic websites and resources into a single, cohesive interface for better accessibility.',
+      tags: ['HTML', 'CSS', 'Web Integration'],
       image: 'project-student-portal',
       githubUrl: 'https://github.com/2303A51087',
     },
