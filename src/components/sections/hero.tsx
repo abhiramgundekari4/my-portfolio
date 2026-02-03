@@ -22,7 +22,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
   }, []);
 
   return (
-    <section id="home" className="relative h-[90vh] min-h-[600px] overflow-hidden bg-primary/5 py-20 md:py-32">
+    <section id="home" className="relative min-h-[80vh] flex items-center overflow-hidden bg-primary/5 py-20 md:py-32">
         <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
                 <div className="space-y-6 text-center md:text-left">

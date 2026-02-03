@@ -1,5 +1,4 @@
-import { Icons } from '@/components/icons';
-import { Code, BrainCircuit, Database, Trophy, Languages, Briefcase } from 'lucide-react';
+import { Code, BrainCircuit, Database, Languages, Briefcase } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -69,11 +68,13 @@ export const portfolioData: PortfolioData = {
         items: [
             {
                 title: "Virtual Internship 1 - EduSkills Foundation",
-                description: "Successfully completed a corporate-aligned virtual internship program focusing on emerging technologies."
+                description: "Successfully completed a corporate-aligned virtual internship program focusing on emerging technologies.",
+                url: "/eduskills-internship-1.pdf"
             },
             {
                 title: "Virtual Internship 2 - EduSkills Foundation",
-                description: "Completed an intensive virtual internship focused on practical technical skill development and industry standards."
+                description: "Completed an intensive virtual internship focused on practical technical skill development and industry standards.",
+                url: "/eduskills-internship-2.pdf"
             }
         ]
     },

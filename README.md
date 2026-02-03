@@ -4,18 +4,23 @@ Professional student portfolio highlighting skills in Python, SQL, and web devel
 
 ## 🚀 Finalizing Your Portfolio
 
-To make your resume and profile picture appear on the site, follow these exact steps:
+To make your resume, profile picture, and certificates appear on the site, follow these exact steps:
 
 ### 1. Upload Your Files
 In the file explorer on the left:
 1. Locate the folder named `public`.
 2. **Right-click** on the `public` folder and select **Upload**.
-3. Choose your profile photo and name it exactly `profile.jpg`.
-4. Choose your resume PDF and name it exactly `resume.pdf`.
+3. **Profile Photo**: Name it exactly `profile.jpg`.
+4. **Resume**: Name it exactly `resume.pdf`.
+5. **Certificates**: 
+   - `unix-linux-certificate.pdf`
+   - `eduskills-internship-1.pdf`
+   - `eduskills-internship-2.pdf`
 
 ### 2. Verify Troubleshooting
-- **Photo not showing?** Ensure the file is named `profile.jpg` (all lowercase). If your photo is a `.png`, you should rename the extension to `.jpg` or ask the AI to update the code.
-- **Resume not downloading?** Ensure the filename is exactly `resume.pdf`.
+- **Photo not showing?** Ensure the file is named `profile.jpg` (all lowercase). If your photo is a `.png`, rename it to `.jpg`.
+- **Resume/Certificates not downloading?** Ensure the filename matches exactly what is listed above.
+- **Case Sensitivity**: Remember that `Profile.JPG` is different from `profile.jpg`. Use lowercase.
 
 ### 3. Refresh
 Refresh the preview window to see your files live.

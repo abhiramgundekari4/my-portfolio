@@ -1,7 +1,7 @@
 import { SectionTitle } from '@/components/ui/section-title';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { portfolioData } from '@/lib/data';
-import { Award, Trophy } from 'lucide-react';
+import { Award, Trophy, ExternalLink } from 'lucide-react';
 
 export function AcademicsSection() {
   return (
@@ -37,8 +37,9 @@ export function AcademicsSection() {
                   <div className="flex items-start gap-4">
                     <Award className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
                     <div>
-                      <a href={cert.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">
+                      <a href={cert.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline flex items-center gap-2">
                         {cert.name}
+                        <ExternalLink className="h-3 w-3" />
                       </a>
                       <p className="text-sm text-muted-foreground">{cert.issuer} - {cert.date}</p>
                     </div>
@@ -62,7 +63,14 @@ export function AcademicsSection() {
                      <div key={itemIndex} className="flex items-start gap-4">
                       <achievementCategory.icon className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
                       <div>
-                        <p className="font-semibold">{item.title}</p>
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline flex items-center gap-2">
+                            {item.title}
+                            <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                          </a>
+                        ) : (
+                          <p className="font-semibold">{item.title}</p>
+                        )}
                         <p className="text-sm text-muted-foreground">{item.description}</p>
                       </div>
                     </div>
