@@ -7,10 +7,13 @@ import { AcademicsSection } from '@/components/sections/academics';
 import { ContactSection } from '@/components/sections/contact';
 import { SiteFooter } from '@/components/site-footer';
 import { portfolioData } from '@/lib/data';
+import ContributionGraph from '@/components/github-contribution-graph';
+import { SectionTitle } from '@/components/ui/section-title';
+import { Github } from 'lucide-react';
 
 const aiInput: PortfolioSummaryInput = {
     skills: 'Python, SQL, C, HTML, CSS, JavaScript, Pandas, NumPy, Node.js, React, Data Structures & Algorithms, Object-Oriented Programming (OOP), REST APIs, Git & GitHub, Docker',
-    experience: 'I am a motivated Python developer with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.',
+    experience: 'I am a motivated Computer Science student at SR University (2023-2027) with a strong foundation in Python and SQL. I have successfully completed two virtual internships at EduSkills Foundation and holds certifications from Infosys (UNIX & Linux) and Coursera (Matrix Algebra). I enjoy building logical, data-driven solutions.',
 };
 
 export default async function PortfolioPage() {
@@ -19,7 +22,7 @@ export default async function PortfolioPage() {
         const result = await generatePortfolioSummary(aiInput);
         summary = result.summary;
     } catch (error) {
-        console.error("Failed to generate portfolio summary with AI. This may be due to a missing or invalid API key.", error);
+        console.error("Failed to generate portfolio summary with AI. Using fallback description.", error);
         summary = aiInput.experience;
     }
 
@@ -30,6 +33,18 @@ export default async function PortfolioPage() {
                 <HeroSection name={portfolioData.name} title={portfolioData.title} summary={summary} />
                 <SkillsSection />
                 <ProjectsSection />
+                
+                {/* GitHub Activity Section */}
+                <section className="container mx-auto px-4 py-16 border-t border-primary/5">
+                    <SectionTitle icon={Github}>Coding Activity</SectionTitle>
+                    <div className="mx-auto max-w-4xl rounded-xl border bg-card p-6 shadow-sm">
+                        <p className="mb-4 text-center text-sm text-muted-foreground font-medium">
+                            GitHub Contributions in the last year
+                        </p>
+                        <ContributionGraph />
+                    </div>
+                </section>
+
                 <AcademicsSection />
                 <ContactSection />
             </main>
