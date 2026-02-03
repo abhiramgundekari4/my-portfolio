@@ -1,4 +1,3 @@
-import { generatePortfolioSummary, type PortfolioSummaryInput } from '@/ai/flows/generate-portfolio-summary';
 import { SiteHeader } from '@/components/site-header';
 import { HeroSection } from '@/components/sections/hero';
 import { SkillsSection } from '@/components/sections/skills';
@@ -11,26 +10,14 @@ import ContributionGraph from '@/components/github-contribution-graph';
 import { SectionTitle } from '@/components/ui/section-title';
 import { Github } from 'lucide-react';
 
-const aiInput: PortfolioSummaryInput = {
-    skills: 'Python, SQL, C, HTML, CSS, JavaScript, Pandas, NumPy, Node.js, React, Data Structures & Algorithms, Object-Oriented Programming (OOP), REST APIs, Git & GitHub, Docker',
-    experience: 'I am a motivated Computer Science student at SR University (2023-2027) with a strong foundation in Python and SQL. I have successfully completed two virtual internships at EduSkills Foundation and holds certifications from Infosys (UNIX & Linux) and Coursera (Matrix Algebra). I enjoy building logical, data-driven solutions.',
-};
+const summaryText = 'I am a motivated Computer Science student at SR University (2023-2027) with a strong foundation in Python and SQL. I have successfully completed two virtual internships at EduSkills Foundation and holds certifications from Infosys (UNIX & Linux) and Coursera (Matrix Algebra). I enjoy building logical, data-driven solutions.';
 
-export default async function PortfolioPage() {
-    let summary;
-    try {
-        const result = await generatePortfolioSummary(aiInput);
-        summary = result.summary;
-    } catch (error) {
-        console.error("Failed to generate portfolio summary with AI. Using fallback description.", error);
-        summary = aiInput.experience;
-    }
-
+export default function PortfolioPage() {
     return (
         <div className="flex min-h-screen flex-col">
             <SiteHeader />
             <main className="flex-1">
-                <HeroSection name={portfolioData.name} title={portfolioData.title} summary={summary} />
+                <HeroSection name={portfolioData.name} title={portfolioData.title} summary={summaryText} />
                 <SkillsSection />
                 <ProjectsSection />
                 
