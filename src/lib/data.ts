@@ -79,17 +79,6 @@ export const portfolioData: PortfolioData = {
         ]
     },
     {
-        category: "Technical Certifications",
-        icon: Award,
-        items: [
-            {
-                title: "Complete UNIX & Linux OS Fundamentals",
-                description: "Certified by Infosys - September 2024",
-                url: "/unix-linux-certificate.pdf"
-            }
-        ]
-    },
-    {
         category: "Languages",
         icon: Languages,
         items: [
