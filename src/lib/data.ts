@@ -1,5 +1,5 @@
 import { Icons } from '@/components/icons';
-import { Code, BrainCircuit, Database, Trophy, Languages } from 'lucide-react';
+import { Code, BrainCircuit, Database, Trophy, Languages, Briefcase } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -63,6 +63,20 @@ export const portfolioData: PortfolioData = {
     }
   ],
   achievements: [
+    {
+        category: "Internships",
+        icon: Briefcase,
+        items: [
+            {
+                title: "Internship Certificate 1",
+                description: "Completed professional internship training and received certification for outstanding performance."
+            },
+            {
+                title: "Internship Certificate 2",
+                description: "Successfully completed professional internship program focused on technical development."
+            }
+        ]
+    },
     {
         category: "Languages",
         icon: Languages,
