@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Download, Send, Github, Linkedin, User } from 'lucide-react';
+import { FileText, Send, Github, Linkedin, User } from 'lucide-react';
 import { portfolioData } from '@/lib/data';
 
 type HeroSectionProps = {
@@ -37,9 +37,9 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                     </p>
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
                         <Button asChild size="lg">
-                            <a href="/resume.pdf" download="Abhiram_Gundekari_Resume.pdf">
-                                <Download className="mr-2 h-5 w-5" />
-                                Download Resume
+                            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                                <FileText className="mr-2 h-5 w-5" />
+                                See My Resume
                             </a>
                         </Button>
                         <Button asChild size="lg" variant="secondary">

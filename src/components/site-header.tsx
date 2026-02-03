@@ -38,7 +38,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Button asChild>
-            <a href="/resume.pdf" download>Download Resume</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">See My Resume</a>
           </Button>
         </nav>
 
@@ -76,7 +76,7 @@ export function SiteHeader() {
                   ))}
                 </nav>
                  <Button asChild className="w-full">
-                    <a href="/resume.pdf" download>Download Resume</a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">See My Resume</a>
                  </Button>
               </div>
             </SheetContent>
