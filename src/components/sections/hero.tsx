@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,11 @@ type HeroSectionProps = {
 export function HeroSection({ name, title, summary }: HeroSectionProps) {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
   const [imageError, setImageError] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section id="home" className="relative h-[90vh] min-h-[600px] overflow-hidden bg-primary/5 py-20 md:py-32">
@@ -61,7 +66,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                 </div>
                 <div className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96">
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
-                        {profileImage && !imageError ? (
+                        {mounted && profileImage && !imageError ? (
                             <Image
                                 src={profileImage.imageUrl}
                                 alt={name}

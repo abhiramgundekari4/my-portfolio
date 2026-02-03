@@ -32,25 +32,11 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      title: 'Data Analytics Dashboard',
-      description: 'A web-based dashboard for visualizing and analyzing sales data, built with Python, Pandas, and Flask.',
-      tags: ['Python', 'Flask', 'Pandas', 'SQL', 'Chart.js'],
-      image: 'project-1',
-      githubUrl: 'https://github.com',
-    },
-    {
-      title: 'E-commerce Platform API',
-      description: 'A robust RESTful API for an e-commerce website, featuring product management, user authentication, and order processing.',
-      tags: ['Python', 'Django REST Framework', 'PostgreSQL', 'JWT'],
-      image: 'project-2',
-      githubUrl: 'https://github.com',
-    },
-    {
-      title: 'Algorithm Visualizer',
-      description: 'An interactive tool built with React to visualize common sorting and pathfinding algorithms like A* and Dijkstra.',
-      tags: ['React', 'TypeScript', 'Data Structures', 'Algorithms'],
-      image: 'project-3',
-      githubUrl: 'https://github.com',
+      title: 'Student Services Portal',
+      description: 'A comprehensive web application designed to streamline university services, allowing students to manage courses, view grades, and access campus resources efficiently. Implemented robust data management using SQL.',
+      tags: ['Python', 'Django', 'PostgreSQL', 'SQL', 'Bootstrap'],
+      image: 'project-student-portal',
+      githubUrl: 'https://github.com/2303A51087',
     },
   ],
   education: {
