@@ -1,4 +1,4 @@
-import { Code, BrainCircuit, Database, Languages, Briefcase, Award } from 'lucide-react';
+import { Code, BrainCircuit, Database, Languages, Briefcase } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
