@@ -1,4 +1,4 @@
-import { Code, BrainCircuit, Database, Languages, Briefcase } from 'lucide-react';
+import { Code, BrainCircuit, Database, Languages, Briefcase, Award } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -75,6 +75,17 @@ export const portfolioData: PortfolioData = {
                 title: "Virtual Internship 2 - EduSkills Foundation",
                 description: "Completed an intensive virtual internship focused on practical technical skill development and industry standards.",
                 url: "/eduskills-internship-2.pdf"
+            }
+        ]
+    },
+    {
+        category: "Technical Certifications",
+        icon: Award,
+        items: [
+            {
+                title: "Complete UNIX & Linux OS Fundamentals",
+                description: "Certified by Infosys - September 2024",
+                url: "/unix-linux-certificate.pdf"
             }
         ]
     },
