@@ -4,6 +4,7 @@ import type { PortfolioData } from './types';
 export const portfolioData: PortfolioData = {
   name: 'Abhiram Gundekari',
   title: 'Python & SQL Developer | DSA Enthusiast',
+  summary: 'I am a motivated student with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.',
   contact: {
     email: 'abhiramgundekari4@gmail.com',
     phone: '7993979070',

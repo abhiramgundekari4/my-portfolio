@@ -10,14 +10,16 @@ import ContributionGraph from '@/components/github-contribution-graph';
 import { SectionTitle } from '@/components/ui/section-title';
 import { Github } from 'lucide-react';
 
-const summaryText = 'I am a motivated student with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.';
-
 export default function PortfolioPage() {
     return (
         <div className="flex min-h-screen flex-col">
             <SiteHeader />
             <main className="flex-1">
-                <HeroSection name={portfolioData.name} title={portfolioData.title} summary={summaryText} />
+                <HeroSection 
+                  name={portfolioData.name} 
+                  title={portfolioData.title} 
+                  summary={portfolioData.summary} 
+                />
                 <SkillsSection />
                 <ProjectsSection />
                 

@@ -42,6 +42,7 @@ export type Achievement = {
 export type PortfolioData = {
   name: string;
   title: string;
+  summary: string;
   contact: {
     email: string;
     phone: string;

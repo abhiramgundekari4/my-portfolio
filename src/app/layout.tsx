@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import './globals.css';
@@ -23,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn('dark', outfit.variable)} suppressHydrationWarning>
-      <body className={cn(outfit.className, 'antialiased')}>
+      <body className={cn(outfit.className, 'antialiased font-body')}>
         {children}
         <Toaster />
       </body>
