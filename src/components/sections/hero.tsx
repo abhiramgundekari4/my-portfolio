@@ -21,7 +21,7 @@ export function HeroSection({ name, title }: HeroSectionProps) {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[70vh] flex items-center overflow-hidden bg-primary/5 py-20 md:py-32">
+    <section id="home" className="relative min-h-[60vh] flex items-center overflow-hidden bg-primary/5 py-20 md:py-32">
         <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
                 <div className="space-y-6 text-center md:text-left">
@@ -62,7 +62,7 @@ export function HeroSection({ name, title }: HeroSectionProps) {
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
                         {mounted && !imageError ? (
                             <Image
-                                src="/profile.jpg?v=2"
+                                src="/profile.jpg?v=3"
                                 alt={name}
                                 fill
                                 priority
