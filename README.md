@@ -11,23 +11,32 @@ To make your resume, profile picture, and certificates appear on the site, ensur
 - **Internship 1 Certificate**: `eduskills-internship-1.pdf`
 - **Internship 2 Certificate**: `eduskills-internship-2.pdf`
 
-## 🌎 How to Publish (Go Live)
+## 🐙 Step 1: Add your code to GitHub
 
-Since this app is built with Next.js, the best way to publish it is using **Firebase App Hosting**.
+1.  **Create a Repository**: Go to [GitHub](https://github.com/new) and create a new repository named `my-portfolio`. Keep it "Public" and do **not** check any boxes for README, .gitignore, or license.
+2.  **Open Terminal**: Use the terminal in your IDE.
+3.  **Run these commands**:
+    ```bash
+    git init
+    git add .
+    git commit -m "initial commit"
+    git branch -M main
+    git remote add origin https://github.com/YOUR_GITHUB_USERNAME/my-portfolio.git
+    git push -u origin main
+    ```
+    *(Replace `YOUR_GITHUB_USERNAME` with your actual GitHub name!)*
 
-### Step 1: Push your code to GitHub
-If you haven't already, create a new repository on GitHub and push all your project files there.
+## 🌎 Step 2: How to Publish (Go Live)
 
-### Step 2: Set up Firebase App Hosting
-1. Go to the [Firebase Console](https://console.firebase.google.com/).
-2. Select your project.
-3. In the left-hand menu, click on **App Hosting**.
-4. Click **Get Started** and follow the instructions to connect your GitHub repository.
-5. Select your repository and the branch you want to deploy (usually `main`).
-6. Firebase will automatically detect that it's a Next.js app and start the build process.
+Once your code is on GitHub, use **Firebase App Hosting** to host it for free.
 
-### Step 3: View your Live Site
-Once the build is complete, Firebase will provide you with a public URL (e.g., `your-project.web.app`). You can also connect a custom domain if you have one!
+1.  Go to the [Firebase Console](https://console.firebase.google.com/).
+2.  Select your project.
+3.  In the left-hand menu, click on **App Hosting**.
+4.  Click **Get Started** and connect your GitHub account.
+5.  Select your `my-portfolio` repository and the `main` branch.
+6.  Firebase will automatically detect it's a Next.js app. Follow the prompts to finish the setup.
+7.  Firebase will provide you with a public URL (e.g., `your-project.web.app`) once the build finishes!
 
 ## 🛠️ Local Development
 To run this project locally:
