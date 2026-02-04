@@ -4,23 +4,33 @@ Professional student portfolio highlighting skills in Python, SQL, and web devel
 
 ## 🚀 Finalizing Your Portfolio
 
-To make your resume, profile picture, and certificates appear on the site, follow these exact steps:
+To make your resume, profile picture, and certificates appear on the site, ensure these files are in your `public` folder with these exact filenames:
+- **Profile Photo**: `profile.jpg`
+- **Resume**: `resume.pdf`
+- **UNIX & Linux Certificate**: `unix-linux-certificate.pdf`
+- **Internship 1 Certificate**: `eduskills-internship-1.pdf`
+- **Internship 2 Certificate**: `eduskills-internship-2.pdf`
 
-### 1. Upload Your Files
-In the file explorer on the left:
-1. Locate the folder named `public`.
-2. **Right-click** on the `public` folder and select **Upload**.
-3. Use the following **exact** filenames (lowercase is mandatory):
-   - **Profile Photo**: `profile.jpg`
-   - **Resume**: `resume.pdf`
-   - **UNIX & Linux Certificate**: `unix-linux-certificate.pdf`
-   - **Internship 1 Certificate**: `eduskills-internship-1.pdf`
-   - **Internship 2 Certificate**: `eduskills-internship-2.pdf`
+## 🌎 How to Publish (Go Live)
 
-### 2. Troubleshooting
-- **Photo/PDF not loading?** Ensure the extension is exactly `.jpg` or `.pdf`. If you have a `.png`, rename it to `.jpg` before uploading.
-- **Case Sensitivity**: Filenames must be all lowercase. `Profile.jpg` will not work; it must be `profile.jpg`.
-- **Refresh**: After uploading, refresh the preview window to see your files live.
+Since this app is built with Next.js, the best way to publish it is using **Firebase App Hosting**.
 
-### 3. Contact Details
-All links are currently mapped to your LinkedIn and GitHub profiles. The "Download Resume" buttons point directly to the `resume.pdf` you upload.
+### Step 1: Push your code to GitHub
+If you haven't already, create a new repository on GitHub and push all your project files there.
+
+### Step 2: Set up Firebase App Hosting
+1. Go to the [Firebase Console](https://console.firebase.google.com/).
+2. Select your project.
+3. In the left-hand menu, click on **App Hosting**.
+4. Click **Get Started** and follow the instructions to connect your GitHub repository.
+5. Select your repository and the branch you want to deploy (usually `main`).
+6. Firebase will automatically detect that it's a Next.js app and start the build process.
+
+### Step 3: View your Live Site
+Once the build is complete, Firebase will provide you with a public URL (e.g., `your-project.web.app`). You can also connect a custom domain if you have one!
+
+## 🛠️ Local Development
+To run this project locally:
+1. `npm install`
+2. `npm run dev`
+3. Open `http://localhost:9002`
