@@ -32,7 +32,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                     <p className="font-headline text-xl font-medium text-accent md:text-2xl">
                         {title}
                     </p>
-                    <p className="max-w-xl text-lg text-muted-foreground mx-auto md:mx-0">
+                    <p className="max-w-xl text-lg text-muted-foreground mx-auto md:mx-0 leading-relaxed">
                         {summary}
                     </p>
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
