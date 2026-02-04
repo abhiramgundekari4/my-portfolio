@@ -10,10 +10,9 @@ import { portfolioData } from '@/lib/data';
 type HeroSectionProps = {
   name: string;
   title: string;
-  summary: string;
 };
 
-export function HeroSection({ name, title, summary }: HeroSectionProps) {
+export function HeroSection({ name, title }: HeroSectionProps) {
   const [imageError, setImageError] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -22,7 +21,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center overflow-hidden bg-primary/5 py-20 md:py-32">
+    <section id="home" className="relative min-h-[70vh] flex items-center overflow-hidden bg-primary/5 py-20 md:py-32">
         <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
                 <div className="space-y-6 text-center md:text-left">
@@ -31,9 +30,6 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                     </h1>
                     <p className="font-headline text-xl font-medium text-accent md:text-2xl">
                         {title}
-                    </p>
-                    <p className="max-w-xl text-lg text-muted-foreground mx-auto md:mx-0 leading-relaxed">
-                        {summary}
                     </p>
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
                         <Button asChild size="lg">
@@ -66,7 +62,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
                         {mounted && !imageError ? (
                             <Image
-                                src="/profile.jpg?updated=true"
+                                src="/profile.jpg?v=2"
                                 alt={name}
                                 fill
                                 priority

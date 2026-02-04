@@ -19,7 +19,6 @@ export default function PortfolioPage() {
                 <HeroSection 
                   name={portfolioData.name} 
                   title={portfolioData.title} 
-                  summary={portfolioData.summary} 
                 />
                 <AboutSection />
                 <SkillsSection />
