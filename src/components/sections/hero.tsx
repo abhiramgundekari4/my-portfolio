@@ -66,7 +66,7 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
                         {mounted && !imageError ? (
                             <Image
-                                src="/profile.jpg"
+                                src="/profile.jpg?updated=true"
                                 alt={name}
                                 fill
                                 priority
