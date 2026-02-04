@@ -74,7 +74,10 @@ export function HeroSection({ name, title, summary }: HeroSectionProps) {
                                 onError={() => setImageError(true)}
                             />
                         ) : (
-                            <User className="h-24 w-24 text-muted-foreground/20" />
+                            <div className="flex flex-col items-center justify-center text-muted-foreground/40">
+                              <User className="h-24 w-24 mb-2" />
+                              <span className="text-xs font-medium">No Photo Uploaded</span>
+                            </div>
                         )}
                     </div>
                 </div>
