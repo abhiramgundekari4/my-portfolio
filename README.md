@@ -3,10 +3,10 @@
 Professional student portfolio highlighting skills in Python, SQL, and web development.
 
 ## ✍️ How to Update Your Information
-All the data for your site (name, summary, skills, and links) is stored in one file:
-1. Open `src/lib/data.ts`.
-2. Find the `socials` object to update your **GitHub**, **LinkedIn**, or **LeetCode** links.
-3. Find the `summary` field to change your "About Me" text.
+All the data for your site (name, summary, skills, and links) is stored in one specific file:
+1.  **Go to the file**: `src/lib/data.ts`
+2.  **To Update Social Links**: Find the `socials` block. You will see lines for `github`, `linkedin`, and `leetcode`. Just change the URLs inside the quotes.
+3.  **To Update Your Summary**: Change the text in the `summary` field.
 
 ## 🚀 Finalizing Your Portfolio
 To make your resume, profile picture, and certificates appear on the site, ensure these files are in your `public` folder with these exact filenames:
