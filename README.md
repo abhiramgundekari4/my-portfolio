@@ -2,8 +2,13 @@
 
 Professional student portfolio highlighting skills in Python, SQL, and web development.
 
-## 🚀 Finalizing Your Portfolio
+## ✍️ How to Update Your Information
+All the data for your site (name, summary, skills, and links) is stored in one file:
+1. Open `src/lib/data.ts`.
+2. Find the `socials` object to update your **GitHub**, **LinkedIn**, or **LeetCode** links.
+3. Find the `summary` field to change your "About Me" text.
 
+## 🚀 Finalizing Your Portfolio
 To make your resume, profile picture, and certificates appear on the site, ensure these files are in your `public` folder with these exact filenames:
 - **Profile Photo**: `profile.jpg`
 - **Resume**: `resume.pdf`
@@ -13,7 +18,7 @@ To make your resume, profile picture, and certificates appear on the site, ensur
 
 ## 🐙 Step 1: Add your code to GitHub
 
-1.  **Create a Repository**: Go to [GitHub](https://github.com/new) and create a new repository named `my-portfolio`. Keep it "Public" and do **not** check any boxes for README, .gitignore, or license.
+1.  **Create a Repository**: Go to [GitHub](https://github.com/new) and create a new repository named `my-portfolio`. Keep it "Public".
 2.  **Open Terminal**: Use the terminal in your IDE.
 3.  **Run these commands**:
     ```bash
@@ -37,9 +42,3 @@ Once your code is on GitHub, use **Firebase App Hosting** to host it for free.
 5.  Select your `my-portfolio` repository and the `main` branch.
 6.  Firebase will automatically detect it's a Next.js app. Follow the prompts to finish the setup.
 7.  Firebase will provide you with a public URL (e.g., `your-project.web.app`) once the build finishes!
-
-## 🛠️ Local Development
-To run this project locally:
-1. `npm install`
-2. `npm run dev`
-3. Open `http://localhost:9002`
