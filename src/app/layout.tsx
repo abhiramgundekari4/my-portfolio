@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { Outfit } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 
-const outfit = Outfit({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-outfit',
+  variable: '--font-space-grotesk',
 });
 
 export const metadata: Metadata = {
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn('dark', outfit.variable)} suppressHydrationWarning>
-      <body className={cn(outfit.className, 'antialiased font-body')}>
+    <html lang="en" className={cn('dark', spaceGrotesk.variable)} suppressHydrationWarning>
+      <body className={cn(spaceGrotesk.className, 'antialiased font-body')}>
         {children}
         <Toaster />
       </body>
