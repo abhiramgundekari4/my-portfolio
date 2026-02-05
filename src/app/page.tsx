@@ -9,7 +9,8 @@ import { SiteFooter } from '@/components/site-footer';
 import { portfolioData } from '@/lib/data';
 import ContributionGraph from '@/components/github-contribution-graph';
 import { SectionTitle } from '@/components/ui/section-title';
-import { Github } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Github, ExternalLink } from 'lucide-react';
 
 export default function PortfolioPage() {
     return (
@@ -27,9 +28,21 @@ export default function PortfolioPage() {
                 <section className="container mx-auto px-4 py-16 border-t border-primary/5">
                     <SectionTitle icon={Github}>Coding Activity</SectionTitle>
                     <div className="mx-auto max-w-4xl rounded-xl border bg-card p-6 shadow-sm">
-                        <p className="mb-4 text-center text-sm text-muted-foreground font-medium">
-                            GitHub Contributions in the last year
-                        </p>
+                        <div className="mb-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
+                            <div>
+                                <p className="text-sm font-medium text-muted-foreground">
+                                    Simulated GitHub Contributions
+                                </p>
+                                <p className="text-xs text-muted-foreground/60">
+                                    Showcasing activity visualization
+                                </p>
+                            </div>
+                            <Button asChild variant="outline" size="sm">
+                                <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer">
+                                    View Real Profile <ExternalLink className="ml-2 h-3 w-3" />
+                                </a>
+                            </Button>
+                        </div>
                         <ContributionGraph />
                     </div>
                 </section>
