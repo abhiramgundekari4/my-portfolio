@@ -25,10 +25,10 @@ export function HeroSection({ name, title }: HeroSectionProps) {
         <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
                 <div className="space-y-6 text-center md:text-left">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
-                        {name}
+                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl leading-tight">
+                        Hi there, I&apos;m <span className="block text-accent mt-2">{name}</span>
                     </h1>
-                    <p className="font-headline text-xl font-medium text-accent md:text-2xl">
+                    <p className="font-headline text-xl font-medium text-muted-foreground md:text-2xl">
                         {title}
                     </p>
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
@@ -62,7 +62,7 @@ export function HeroSection({ name, title }: HeroSectionProps) {
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
                         {mounted && !imageError ? (
                             <Image
-                                src="/profile.jpg?v=3"
+                                src="/profile.jpg?v=4"
                                 alt={name}
                                 fill
                                 priority
