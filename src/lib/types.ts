@@ -12,7 +12,6 @@ export type Project = {
 export type SkillCategory = {
   title: string;
   icon: LucideIcon;
-  skills: string[];
 };
 
 export type AcademicRecord = {
@@ -31,7 +30,7 @@ export type Certification = {
 
 export type Achievement = {
     category: string;
-    icon: LucideIcon;
+    icon: any; // Using any for flexible icon types
     items: {
         title: string;
         description: string;
@@ -50,8 +49,13 @@ export type PortfolioData = {
   socials: {
     github: string;
     linkedin: string;
+    leetcode?: string;
   };
-  skills: SkillCategory[];
+  skills: {
+    title: string;
+    icon: any;
+    skills: string[];
+  }[];
   projects: Project[];
   education: AcademicRecord;
   certifications: Certification[];

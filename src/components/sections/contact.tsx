@@ -1,9 +1,8 @@
 import { SectionTitle } from '@/components/ui/section-title';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/lib/data';
 import { Mail, Phone, Linkedin, Github, MessageSquare } from 'lucide-react';
-import Link from 'next/link';
+import { Icons } from '@/components/icons';
 
 export function ContactSection() {
   const contactLinks = [
@@ -32,6 +31,15 @@ export function ContactSection() {
       text: 'Follow on GitHub',
     },
   ];
+
+  if (portfolioData.socials.leetcode) {
+    contactLinks.push({
+      icon: Icons.leetcode as any,
+      label: 'LeetCode',
+      href: portfolioData.socials.leetcode,
+      text: 'View LeetCode Profile',
+    });
+  }
 
   return (
     <section id="contact" className="container mx-auto scroll-mt-20 px-4 py-16">

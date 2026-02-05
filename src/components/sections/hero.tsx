@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { FileText, Send, Github, Linkedin, User } from 'lucide-react';
+import { Icons } from '@/components/icons';
 import { portfolioData } from '@/lib/data';
 
 type HeroSectionProps = {
@@ -56,13 +57,20 @@ export function HeroSection({ name, title }: HeroSectionProps) {
                                 <Linkedin className="h-6 w-6" />
                             </a>
                         </Button>
+                        {portfolioData.socials.leetcode && (
+                          <Button asChild variant="ghost" size="icon">
+                              <a href={portfolioData.socials.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                                  <Icons.leetcode className="h-6 w-6" />
+                              </a>
+                          </Button>
+                        )}
                     </div>
                 </div>
                 <div className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96">
                     <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-background bg-secondary shadow-2xl flex items-center justify-center">
                         {mounted && !imageError ? (
                             <Image
-                                src="/profile.jpg?v=4"
+                                src="/profile.jpg?v=5"
                                 alt={name}
                                 fill
                                 priority

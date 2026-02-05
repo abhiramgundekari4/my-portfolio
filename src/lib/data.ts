@@ -1,4 +1,5 @@
-import { Code, BrainCircuit, Database, Languages, Briefcase } from 'lucide-react';
+import { Code, BrainCircuit, Database, Languages, Briefcase, Trophy } from 'lucide-react';
+import { Icons } from '@/components/icons';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -12,6 +13,7 @@ export const portfolioData: PortfolioData = {
   socials: {
     github: 'https://github.com/2303A51087',
     linkedin: 'https://www.linkedin.com/in/abhiram-gundekari-56a740295/',
+    leetcode: 'https://leetcode.com/u/2303A51087/',
   },
   skills: [
     {
@@ -63,6 +65,17 @@ export const portfolioData: PortfolioData = {
     }
   ],
   achievements: [
+    {
+        category: "Coding Challenges",
+        icon: Icons.leetcode,
+        items: [
+            {
+                title: "LeetCode Proficiency",
+                description: "Solved numerous problems across various topics like Arrays, Strings, and Linked Lists to strengthen problem-solving skills.",
+                url: "https://leetcode.com/u/2303A51087/"
+            }
+        ]
+    },
     {
         category: "Internships",
         icon: Briefcase,
