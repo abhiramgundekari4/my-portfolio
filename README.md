@@ -41,4 +41,8 @@ Once your code is on GitHub, use **Firebase App Hosting** to host it for free.
 4.  Click **Get Started** and connect your GitHub account.
 5.  Select your `my-portfolio` repository and the `main` branch.
 6.  Firebase will automatically detect it's a Next.js app. Follow the prompts to finish the setup.
-7.  Firebase will provide you with a public URL (e.g., `your-project.web.app`) once the build finishes!
+
+### 🔗 Your Public URL
+Once the build finishes, Firebase will provide you with a public URL (e.g., `https://your-project.web.app`). 
+- **Share this link** on your LinkedIn profile, resume, and social media!
+- **Anyone in the world** with this link can now view your portfolio.
