@@ -13,7 +13,7 @@ export const portfolioData: PortfolioData = {
   socials: {
     github: 'https://github.com/2303A51087',
     linkedin: 'https://www.linkedin.com/in/abhiram-gundekari-56a740295/',
-    leetcode: 'https://leetcode.com/u/2303A51087/',
+    leetcode: 'https://leetcode.com/u/abhirammmm/',
   },
   skills: [
     {
@@ -72,7 +72,7 @@ export const portfolioData: PortfolioData = {
             {
                 title: "LeetCode Proficiency",
                 description: "Solved numerous problems across various topics like Arrays, Strings, and Linked Lists to strengthen problem-solving skills.",
-                url: "https://leetcode.com/u/2303A51087/"
+                url: "https://leetcode.com/u/abhirammmm/"
             }
         ]
     },
