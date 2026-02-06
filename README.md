@@ -3,7 +3,7 @@
 Professional student portfolio highlighting skills in Python, SQL, and web development.
 
 ## 🚀 Step 1: Push Your Code to GitHub
-To go live, your code must first be on GitHub.
+To go live, your code must first be on GitHub. 
 1.  Go to [GitHub](https://github.com/new) and create a new repository named `my-portfolio`. **Do not** initialize it with a README or License.
 2.  Open the terminal in your editor and run these commands one by one:
     ```bash
