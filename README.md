@@ -11,6 +11,7 @@ Professional student portfolio highlighting skills in Python, SQL, and web devel
 1.  **Add to List**: In `src/lib/data.ts`, find the `certifications` array. Add a new object with the name, issuer, and date.
 2.  **Using a PDF file**: 
     * Upload your certificate PDF to the `public/` folder.
+    * **CRITICAL**: Ensure the filename has no spaces (e.g., `data-analyst-certificate.pdf`).
     * In `src/lib/data.ts`, set the `url` to the path of your file (e.g., `"/data-analyst-certificate.pdf"`).
 3.  **Using a Website Link**: Set the `url` to the full web address (e.g., `https://coursera.org/verify/...`).
 

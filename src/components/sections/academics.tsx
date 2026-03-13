@@ -60,35 +60,38 @@ export function AcademicsSection() {
         </div>
         
         {/* Achievements & Communication Sections */}
-        {portfolioData.achievements.map((achievementCategory, index) => (
-          <div key={index}>
-            <h3 className="mb-4 font-headline text-2xl font-semibold text-primary">
-              {achievementCategory.category}
-            </h3>
-            <Card>
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  {achievementCategory.items.map((item, itemIndex) => (
-                     <div key={itemIndex} className="flex items-start gap-4">
-                      <achievementCategory.icon className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
-                      <div>
-                        {item.url ? (
-                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline flex items-center gap-2">
-                            {item.title}
-                            <ExternalLink className="h-3 w-3 text-muted-foreground" />
-                          </a>
-                        ) : (
-                          <p className="font-semibold">{item.title}</p>
-                        )}
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
+        {portfolioData.achievements.map((achievementCategory, index) => {
+          const CategoryIcon = achievementCategory.icon;
+          return (
+            <div key={index}>
+              <h3 className="mb-4 font-headline text-2xl font-semibold text-primary">
+                {achievementCategory.category}
+              </h3>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    {achievementCategory.items.map((item, itemIndex) => (
+                       <div key={itemIndex} className="flex items-start gap-4">
+                        <CategoryIcon className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                        <div>
+                          {item.url ? (
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline flex items-center gap-2">
+                              {item.title}
+                              <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                            </a>
+                          ) : (
+                            <p className="font-semibold">{item.title}</p>
+                          )}
+                          <p className="text-sm text-muted-foreground">{item.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        ))}
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
