@@ -63,18 +63,6 @@ export const portfolioData: PortfolioData = {
       url: 'https://coursera.org/verify/4AMMD32RY7U7',
     },
     {
-      name: 'Python for Data Science',
-      issuer: 'IBM / Coursera',
-      date: 'August 2024',
-      url: '#', 
-    },
-    {
-      name: 'SQL (Basic) Certificate',
-      issuer: 'HackerRank',
-      date: 'July 2024',
-      url: '#',
-    },
-    {
       name: 'Data Analyst Certificate',
       issuer: 'Coursera / Google',
       date: '2024',
