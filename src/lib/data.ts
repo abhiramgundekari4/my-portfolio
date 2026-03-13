@@ -1,5 +1,4 @@
-import { Code, BrainCircuit, Database, Languages, Briefcase, Trophy } from 'lucide-react';
-import { Icons } from '@/components/icons';
+import { Code, BrainCircuit, Database, Languages, Briefcase } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -77,8 +76,8 @@ export const portfolioData: PortfolioData = {
     },
     {
       name: 'Data Analyst Certificate',
-      issuer: '[Issuer Name]',
-      date: '[Date]',
+      issuer: 'Coursera / Google',
+      date: '2024',
       url: '#',
     }
   ],
