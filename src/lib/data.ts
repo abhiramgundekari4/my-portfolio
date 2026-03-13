@@ -29,7 +29,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Core Concepts & Tools',
       icon: Database,
-      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'REST APIs', 'Git & GitHub', 'Docker'],
+      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'Git & GitHub'],
     },
   ],
   projects: [
