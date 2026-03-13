@@ -74,6 +74,12 @@ export const portfolioData: PortfolioData = {
       issuer: 'HackerRank',
       date: 'July 2024',
       url: '#',
+    },
+    {
+      name: 'Data Analyst Certificate',
+      issuer: '[Issuer Name]',
+      date: '[Date]',
+      url: '#',
     }
   ],
   achievements: [
