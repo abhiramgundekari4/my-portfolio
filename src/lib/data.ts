@@ -1,4 +1,4 @@
-import { Code, BrainCircuit, Database, Languages, Briefcase } from 'lucide-react';
+import { Code, BrainCircuit, Database, Briefcase } from 'lucide-react';
 import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
@@ -83,24 +83,6 @@ export const portfolioData: PortfolioData = {
                 title: "Virtual Internship 2 - EduSkills Foundation",
                 description: "Completed an intensive virtual internship focused on practical technical skill development and industry standards.",
                 url: "/eduskills-internship-2.pdf"
-            }
-        ]
-    },
-    {
-        category: "Languages",
-        icon: Languages,
-        items: [
-            {
-                title: "English",
-                description: "Professional Working Proficiency"
-            },
-            {
-                title: "Telugu",
-                description: "Native or Bilingual Proficiency"
-            },
-            {
-                title: "Hindi",
-                description: "Professional Working Proficiency"
             }
         ]
     }
