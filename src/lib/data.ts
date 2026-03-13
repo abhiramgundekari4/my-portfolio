@@ -66,7 +66,7 @@ export const portfolioData: PortfolioData = {
       name: 'Data Analyst Certificate',
       issuer: 'Coursera / Google',
       date: '2024',
-      url: '#',
+      url: '/data-analyst-certificate.pdf',
     }
   ],
   achievements: [
