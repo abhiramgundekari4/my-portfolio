@@ -7,10 +7,9 @@ import { AcademicsSection } from '@/components/sections/academics';
 import { ContactSection } from '@/components/sections/contact';
 import { SiteFooter } from '@/components/site-footer';
 import { portfolioData } from '@/lib/data';
-import ContributionGraph from '@/components/github-contribution-graph';
+import { LeetCodeStats } from '@/components/leetcode-stats';
 import { SectionTitle } from '@/components/ui/section-title';
-import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import { Icons } from '@/components/icons';
 
 export default function PortfolioPage() {
     return (
@@ -26,25 +25,8 @@ export default function PortfolioPage() {
                 <ProjectsSection />
                 
                 <section className="container mx-auto px-4 py-16 border-t border-primary/5">
-                    <SectionTitle icon={Github}>Coding Activity</SectionTitle>
-                    <div className="mx-auto max-w-4xl rounded-xl border bg-card p-6 shadow-sm">
-                        <div className="mb-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
-                            <div>
-                                <p className="text-sm font-medium text-muted-foreground">
-                                    Simulated GitHub Contributions
-                                </p>
-                                <p className="text-xs text-muted-foreground/60">
-                                    Showcasing activity visualization
-                                </p>
-                            </div>
-                            <Button asChild variant="outline" size="sm">
-                                <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer">
-                                    View Real Profile <ExternalLink className="ml-2 h-3 w-3" />
-                                </a>
-                            </Button>
-                        </div>
-                        <ContributionGraph />
-                    </div>
+                    <SectionTitle icon={Icons.leetcode as any}>LeetCode Stats & Activity</SectionTitle>
+                    <LeetCodeStats />
                 </section>
 
                 <AcademicsSection />
