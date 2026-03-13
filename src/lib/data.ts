@@ -66,17 +66,6 @@ export const portfolioData: PortfolioData = {
   ],
   achievements: [
     {
-        category: "Coding Challenges",
-        icon: Icons.leetcode,
-        items: [
-            {
-                title: "LeetCode Proficiency",
-                description: "Solved numerous problems across various topics like Arrays, Strings, and Linked Lists to strengthen problem-solving skills.",
-                url: "https://leetcode.com/u/abhirammmm/"
-            }
-        ]
-    },
-    {
         category: "Internships",
         icon: Briefcase,
         items: [
