@@ -37,10 +37,19 @@ export function AcademicsSection() {
                   <div className="flex items-start gap-4">
                     <Award className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
                     <div>
-                      <a href={cert.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline flex items-center gap-2">
-                        {cert.name}
-                        <ExternalLink className="h-3 w-3" />
-                      </a>
+                      {cert.url ? (
+                        <a 
+                          href={cert.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="font-semibold hover:underline flex items-center gap-2 group"
+                        >
+                          {cert.name}
+                          <ExternalLink className="h-3 w-3 text-muted-foreground transition-colors group-hover:text-primary" />
+                        </a>
+                      ) : (
+                        <p className="font-semibold">{cert.name}</p>
+                      )}
                       <p className="text-sm text-muted-foreground">{cert.issuer} - {cert.date}</p>
                     </div>
                   </div>
