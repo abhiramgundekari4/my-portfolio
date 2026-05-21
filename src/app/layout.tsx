@@ -3,6 +3,7 @@ import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { Starfield } from '@/components/starfield';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -22,10 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn('dark', spaceGrotesk.variable)} suppressHydrationWarning>
-      <body className={cn(spaceGrotesk.className, 'antialiased font-body')}>
+      <body className={cn(spaceGrotesk.className, 'antialiased font-body relative')}>
+        <Starfield />
         {children}
         <Toaster />
       </body>
     </html>
   );
 }
+

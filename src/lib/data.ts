@@ -10,7 +10,7 @@ export const portfolioData: PortfolioData = {
     phone: '7993979070',
   },
   socials: {
-    github: 'https://github.com/2303A51087',
+    github: 'https://github.com/abhiramgundekari4',
     linkedin: 'https://www.linkedin.com/in/abhiram-gundekari-56a740295/',
     leetcode: 'https://leetcode.com/u/abhirammmm/',
   },
@@ -33,11 +33,26 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
+      title: 'AI RAG Chatbot',
+      description: 'An intelligent Retrieval-Augmented Generation (RAG) chatbot that answers questions from uploaded PDF documents using Generative AI and vector search. Built with semantic search, context-aware AI responses, and a fast, real-time interactive user interface.',
+      tags: ['Python', 'Streamlit', 'LangChain', 'FAISS', 'HuggingFace', 'Groq API'],
+      image: 'project-rag-chatbot',
+      githubUrl: 'https://github.com/abhiramgundekari4',
+      liveUrl: 'https://lnkd.in/gUJ9-PPf',
+    },
+    {
+      title: 'Smart Task Manager',
+      description: 'A full-stack student productivity application built using the MERN (MongoDB, Express, React, Node) stack. It streamlines academic planning by allowing users to create, prioritize, and track tasks. Features real-time deadline monitoring, priority organization, and progress analytics on an interactive dashboard.',
+      tags: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack'],
+      image: 'project-task-manager',
+      githubUrl: 'https://github.com/abhiramgundekari4',
+    },
+    {
       title: 'Student Services Portal',
       description: 'A dedicated web portal developed using HTML and CSS. This platform streamlines university operations by integrating external academic websites and resources into a single, cohesive interface for better accessibility.',
       tags: ['HTML', 'CSS', 'Web Integration'],
       image: 'project-student-portal',
-      githubUrl: 'https://github.com/2303A51087',
+      githubUrl: 'https://github.com/abhiramgundekari4',
     },
   ],
   education: {
