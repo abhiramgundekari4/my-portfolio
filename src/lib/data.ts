@@ -46,6 +46,7 @@ export const portfolioData: PortfolioData = {
       tags: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack'],
       image: 'project-task-manager',
       githubUrl: 'https://github.com/abhiramgundekari4',
+      liveUrl: '/task-manager',
     },
     {
       title: 'Student Services Portal',

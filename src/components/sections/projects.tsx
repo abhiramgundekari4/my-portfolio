@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { SectionTitle } from '@/components/ui/section-title';
 import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { SpotlightCard } from '@/components/ui/spotlight-card';
@@ -170,6 +171,17 @@ export function ProjectsSection() {
                             ))}
                           </div>
                         </div>
+
+                        {project.liveUrl && (
+                          <div className="pt-4 border-t border-white/[0.05]">
+                            <Button asChild className="w-full bg-accent hover:bg-accent/80 text-background font-bold shadow-lg shadow-accent/25 transition-all duration-300">
+                              <Link href={project.liveUrl} target={project.liveUrl.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
+                                <Eye className="mr-2 h-4 w-4" />
+                                Launch Live Showcase
+                              </Link>
+                            </Button>
+                          </div>
+                        )}
                       </div>
                     </DialogContent>
                   </Dialog>
