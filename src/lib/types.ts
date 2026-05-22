@@ -38,6 +38,12 @@ export type Achievement = {
     }[];
 };
 
+export type JourneyItem = {
+  year: string;
+  title: string;
+  desc: string;
+};
+
 export type PortfolioData = {
   name: string;
   title: string;
@@ -60,4 +66,5 @@ export type PortfolioData = {
   education: AcademicRecord;
   certifications: Certification[];
   achievements: Achievement[];
+  journey: JourneyItem[];
 };

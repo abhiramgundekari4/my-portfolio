@@ -102,5 +102,37 @@ export const portfolioData: PortfolioData = {
             }
         ]
     }
+  ],
+  journey: [
+    {
+      year: "2023",
+      title: "Discovered CS & Programming",
+      desc: "Initiated my B.Tech in Computer Science & Engineering at SR University. Developed a deep fascination for core algorithms, modular architecture, and problem-solving paradigms."
+    },
+    {
+      year: "Early 2024",
+      title: "Mastering DSA & OOP",
+      desc: "Delved into standard data structures, algorithmic complexities, and clean object-oriented concepts (Encapsulation, Inheritance, Abstraction, Polymorphism) in Java and Python."
+    },
+    {
+      year: "Mid 2024",
+      title: "Venturing into Full-Stack MERN",
+      desc: "Learned database models and Web APIs, mastering MongoDB, Express, React, and Node.js. Built interactive frontends and modular database architectures."
+    },
+    {
+      year: "Late 2024",
+      title: "Google & EduSkills Internships",
+      desc: "Completed intensive virtual internships with EduSkills Foundation focusing on practical industry-aligned standards and software engineering workflows."
+    },
+    {
+      year: "2025",
+      title: "TensorFlow & 150+ LeetCode",
+      desc: "Expanded into AI/ML with TensorFlow and Scikit-Learn. Built predictive analytics pipelines and achieved a milestone of 150+ LeetCode problems solved consistently."
+    },
+    {
+      year: "Now (2026)",
+      title: "Ready for Software Engineering Roles",
+      desc: "Actively seeking internship and developer opportunities to apply full-stack architectures, relational/non-relational database design, and machine learning pipelines."
+    }
   ]
 };

@@ -3,6 +3,7 @@ import { HeroSection } from '@/components/sections/hero';
 import { AboutSection } from '@/components/sections/about';
 import { SkillsSection } from '@/components/sections/skills';
 import { ProjectsSection } from '@/components/sections/projects';
+import { JourneySection } from '@/components/sections/journey';
 import { AcademicsSection } from '@/components/sections/academics';
 import { ContactSection } from '@/components/sections/contact';
 import { SiteFooter } from '@/components/site-footer';
@@ -29,6 +30,7 @@ export default function PortfolioPage() {
                     <LeetCodeStats />
                 </section>
 
+                <JourneySection />
                 <AcademicsSection />
                 <ContactSection />
             </main>
