@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Starfield } from '@/components/starfield';
+import { CustomCursor } from '@/components/ui/custom-cursor';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn('dark', spaceGrotesk.variable)} suppressHydrationWarning>
       <body className={cn(spaceGrotesk.className, 'antialiased font-body relative')}>
+        <CustomCursor />
         <Starfield />
         {children}
         <Toaster />
