@@ -60,6 +60,7 @@ export const portfolioData: PortfolioData = {
     degree: 'B.Tech in Computer Science & Engineering',
     period: '2023 - 2027',
     details: [
+      'Academic Record: 7.4 CGPA / 10',
       'Focus on Software Development, Artificial Intelligence, and Advanced Data Structures.',
       'Relevant Coursework: Data Structures, Algorithms, DBMS, OOPs, Web Development, Machine Learning.'
     ],
