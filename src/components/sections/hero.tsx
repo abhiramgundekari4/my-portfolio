@@ -52,7 +52,7 @@ export function HeroSection({ name, title }: HeroSectionProps) {
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Button asChild size="lg" className="shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all hover:scale-105 duration-200">
-                <a href="https://drive.google.com/file/d/1_Waja-JeaBK5fswLjX-KFrjeb1xSXH1m/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1CthGoVe-GHd8rehoXf7nAEh41kOzgPrH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <FileText className="mr-2 h-5 w-5" />
                   See My Resume
                 </a>

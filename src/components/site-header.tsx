@@ -75,7 +75,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Button asChild className="shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:scale-105 active:scale-95 duration-200">
-              <a href="https://drive.google.com/file/d/1_Waja-JeaBK5fswLjX-KFrjeb1xSXH1m/view?usp=sharing" target="_blank" rel="noopener noreferrer">See My Resume</a>
+              <a href="https://drive.google.com/file/d/1CthGoVe-GHd8rehoXf7nAEh41kOzgPrH/view?usp=sharing" target="_blank" rel="noopener noreferrer">See My Resume</a>
             </Button>
           </nav>
 
@@ -114,7 +114,7 @@ export function SiteHeader() {
                   </nav>
                   <div className="mt-auto pb-8">
                     <Button asChild className="w-full shadow-lg shadow-primary/20">
-                      <a href="https://drive.google.com/file/d/1_Waja-JeaBK5fswLjX-KFrjeb1xSXH1m/view?usp=sharing" target="_blank" rel="noopener noreferrer">See My Resume</a>
+                      <a href="https://drive.google.com/file/d/1CthGoVe-GHd8rehoXf7nAEh41kOzgPrH/view?usp=sharing" target="_blank" rel="noopener noreferrer">See My Resume</a>
                     </Button>
                   </div>
                 </div>
