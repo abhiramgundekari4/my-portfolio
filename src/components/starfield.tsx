@@ -65,8 +65,19 @@ export function Starfield() {
       mouseX += (targetMouseX - mouseX) * 0.05;
       mouseY += (targetMouseY - mouseY) * 0.05;
 
-      const parallaxX = (mouseX - width / 2) * 0.07;
-      const parallaxY = (mouseY - height / 2) * 0.07;
+      // Soft professional cursor spotlight tracking (indigo-to-cyan glow)
+      const gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 300);
+      gradient.addColorStop(0, 'rgba(99, 102, 241, 0.08)');  // Indigo base
+      gradient.addColorStop(0.5, 'rgba(6, 182, 212, 0.04)'); // Cyan highlight
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');           // Fade away
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(mouseX, mouseY, 300, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Subtler parallax ratio (0.015 instead of 0.07) for stable, premium background motion
+      const parallaxX = (mouseX - width / 2) * 0.015;
+      const parallaxY = (mouseY - height / 2) * 0.015;
 
       stars.forEach((star) => {
         // Apply parallax offset
@@ -84,11 +95,22 @@ export function Starfield() {
         if (star.alpha <= 0.08 || star.alpha >= 0.92) {
           star.alphaSpeed = -star.alphaSpeed;
         }
+
+        // Active interaction: Brighten stars in close proximity to the cursor
+        const dx = drawX - mouseX;
+        const dy = drawY - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        let finalAlpha = star.alpha;
+        
+        if (dist < 200) {
+          const proximityFactor = 1 - (dist / 200);
+          finalAlpha = Math.min(0.95, star.alpha + proximityFactor * 0.5);
+        }
         
         // Star glow
         ctx.beginPath();
         ctx.arc(drawX, drawY, star.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${Math.max(0.1, Math.min(star.alpha, 0.95))})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${Math.max(0.1, Math.min(finalAlpha, 0.95))})`;
         ctx.fill();
 
         // Slow drift
@@ -112,7 +134,7 @@ export function Starfield() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none -z-20 bg-transparent transition-opacity duration-1000"
-      style={{ opacity: 0.65 }}
+      style={{ opacity: 0.8 }}
     />
   );
 }

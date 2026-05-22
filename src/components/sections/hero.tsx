@@ -124,17 +124,17 @@ export function HeroSection({ name, title }: HeroSectionProps) {
             {/* Floating Tech Badges */}
             <div className="absolute top-12 left-4 bg-background/90 border border-primary/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2 shadow-lg shadow-black/35 animate-float">
               <Terminal className="h-3.5 w-3.5 text-accent" />
-              <span>Python & C</span>
+              <span>Full-Stack MERN</span>
             </div>
             
             <div className="absolute bottom-16 right-4 bg-background/90 border border-accent/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2 shadow-lg shadow-black/35 animate-float [animation-delay:2s]">
               <Database className="h-3.5 w-3.5 text-primary" />
-              <span>SQL Queries</span>
+              <span>Machine Learning & SQL</span>
             </div>
             
             <div className="absolute bottom-6 left-8 bg-background/90 border border-indigo-500/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2 shadow-lg shadow-black/35 animate-float [animation-delay:4s]">
               <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
-              <span>DSA / LeetCode</span>
+              <span>DSA / 150+ Solved</span>
             </div>
           </div>
 

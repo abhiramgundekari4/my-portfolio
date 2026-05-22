@@ -3,8 +3,8 @@ import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
   name: 'Abhiram Gundekari',
-  title: 'Python & SQL Developer | DSA Enthusiast',
-  summary: 'I am a motivated student with a strong foundation in programming fundamentals, object-oriented concepts, and database management. I enjoy building logical, data-driven solutions and continuously improving my skills through hands-on projects and learning. I am eager to contribute to real-world applications while growing as a software professional.',
+  title: 'B.Tech CS Student | Full-Stack & Machine Learning Developer',
+  summary: 'B.Tech Computer Science student (Graduating 2027) with skills in Java, Python, JavaScript, SQL, Machine Learning, Data Structures & Algorithms, DBMS, OOP, and Software Development concepts. Experienced in building full-stack web applications and machine learning projects using MERN stack, REST APIs, TensorFlow, Scikit-Learn, MongoDB, and MySQL. Strong problem-solving abilities demonstrated through 150+ LeetCode problems and seeking internship opportunities to apply technical skills in real-world environments.',
   contact: {
     email: 'abhiramgundekari4@gmail.com',
     phone: '7993979070',
@@ -18,17 +18,17 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Languages & Databases',
       icon: Code,
-      skills: ['Python (Proficient)', 'SQL (Proficient)', 'C', 'HTML', 'CSS', 'JavaScript'],
+      skills: ['Java', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'MySQL', 'C', 'HTML', 'CSS'],
     },
     {
       title: 'Frameworks & Libraries',
       icon: BrainCircuit,
-      skills: ['Pandas', 'NumPy', 'Node.js', 'React'],
+      skills: ['MERN Stack', 'React', 'Node.js', 'Express', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'NumPy'],
     },
     {
       title: 'Core Concepts & Tools',
       icon: Database,
-      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'Git & GitHub'],
+      skills: ['Data Structures & Algorithms (150+ Solved)', 'Machine Learning', 'REST APIs', 'DBMS', 'OOP', 'Git & GitHub'],
     },
   ],
   projects: [
@@ -57,11 +57,11 @@ export const portfolioData: PortfolioData = {
   ],
   education: {
     institution: 'SR University',
-    degree: 'Bachelor of Science in Computer Science',
+    degree: 'B.Tech in Computer Science & Engineering',
     period: '2023 - 2027',
     details: [
-      'Concentration in Software Engineering and Data Science.',
-      'Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development.'
+      'Focus on Software Development, Artificial Intelligence, and Advanced Data Structures.',
+      'Relevant Coursework: Data Structures, Algorithms, DBMS, OOPs, Web Development, Machine Learning.'
     ],
   },
   certifications: [
