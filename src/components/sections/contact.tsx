@@ -54,7 +54,7 @@ export function ContactSection() {
     });
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       toast?.({
@@ -66,21 +66,47 @@ export function ContactSection() {
     }
 
     setIsSending(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSending(false);
-      setIsSent(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      toast?.({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. I'll get back to you shortly.",
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "f842e418-0890-4552-ba04-19a592049cf4",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
 
-      // Reset success status after a delay
-      setTimeout(() => setIsSent(false), 5000);
-    }, 1500);
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSending(false);
+        setIsSent(true);
+        setFormData({ name: '', email: '', message: '' });
+        
+        toast?.({
+          title: "Message Sent Successfully!",
+          description: "Thank you for reaching out. Your message has been sent to Abhiram.",
+        });
+
+        // Reset success status after a delay
+        setTimeout(() => setIsSent(false), 5000);
+      } else {
+        throw new Error(result.message || "Failed to submit message");
+      }
+    } catch (error: any) {
+      setIsSending(false);
+      toast?.({
+        title: "Submission Error",
+        description: error.message || "Something went wrong. Please check your network and try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
