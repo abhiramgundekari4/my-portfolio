@@ -1,5 +1,6 @@
 import { SectionTitle } from '@/components/ui/section-title';
-import { Card, CardContent } from '@/components/ui/card';
+import { CardContent } from '@/components/ui/card';
+import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { portfolioData } from '@/lib/data';
 import { UserCircle, Shield, BrainCircuit, Terminal, Briefcase } from 'lucide-react';
 
@@ -31,7 +32,7 @@ export function AboutSection() {
     <section id="about" className="container mx-auto scroll-mt-20 px-4 py-16">
       <SectionTitle icon={UserCircle}>About Me</SectionTitle>
       <div className="mx-auto max-w-5xl">
-        <Card className="glass-card glass-card-hover border-white/[0.05] transition-all duration-300">
+        <SpotlightCard className="border-white/[0.05] p-0">
           <CardContent className="p-8 md:p-12">
             <div className="grid gap-10 md:grid-cols-12 items-center">
               
@@ -67,7 +68,7 @@ export function AboutSection() {
 
             </div>
           </CardContent>
-        </Card>
+        </SpotlightCard>
       </div>
     </section>
   );

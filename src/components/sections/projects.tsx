@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import { SectionTitle } from '@/components/ui/section-title';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/lib/data';
@@ -48,9 +49,9 @@ export function ProjectsSection() {
             const projectImage = PlaceHolderImages.find(p => p.id === project.image);
             const details = getProjectDetails(project.title, project.description);
             return (
-              <Card 
+              <SpotlightCard 
                 key={index} 
-                className="group flex flex-col overflow-hidden glass-card glass-card-hover border-white/[0.05] transition-all duration-500"
+                className="group flex flex-col overflow-hidden border-white/[0.05] p-0"
               >
                 {/* Project Image Section */}
                 {projectImage && (
@@ -180,7 +181,7 @@ export function ProjectsSection() {
                     </a>
                   </Button>
                 </CardFooter>
-              </Card>
+              </SpotlightCard>
             );
           })}
         </div>

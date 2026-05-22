@@ -1,5 +1,6 @@
 import { SectionTitle } from '@/components/ui/section-title';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { portfolioData } from '@/lib/data';
 import { Award, Trophy, ExternalLink, GraduationCap, Calendar, Briefcase, FileText } from 'lucide-react';
 
@@ -20,7 +21,7 @@ export function AcademicsSection() {
               <span>Education</span>
             </h3>
             
-            <Card className="glass-card glass-card-hover border-white/[0.05] overflow-hidden relative">
+            <SpotlightCard className="border-white/[0.05] p-0 overflow-hidden relative">
               <div className="absolute top-0 right-0 h-24 w-24 bg-accent/5 rounded-full blur-2xl pointer-events-none" />
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-2 text-xs text-accent font-semibold mb-1">
@@ -42,7 +43,7 @@ export function AcademicsSection() {
                   ))}
                 </ul>
               </CardContent>
-            </Card>
+            </SpotlightCard>
           </div>
 
           {/* Internships Timeline (5 Cols) */}
@@ -101,9 +102,9 @@ export function AcademicsSection() {
           
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {portfolioData.certifications.map((cert, index) => (
-              <Card 
+              <SpotlightCard 
                 key={index}
-                className="glass-card glass-card-hover border-white/[0.05] flex items-center p-5 relative overflow-hidden group hover:border-accent/30"
+                className="border-white/[0.05] flex items-center p-5 relative overflow-hidden group"
               >
                 <div className="absolute top-0 right-0 h-16 w-16 bg-accent/5 rounded-bl-full pointer-events-none group-hover:bg-accent/10 transition-colors" />
                 <div className="flex items-center gap-4.5 w-full">
@@ -129,7 +130,7 @@ export function AcademicsSection() {
                     </p>
                   </div>
                 </div>
-              </Card>
+              </SpotlightCard>
             ))}
           </div>
         </div>

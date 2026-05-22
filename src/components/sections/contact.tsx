@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { SectionTitle } from '@/components/ui/section-title';
-import { Card, CardContent } from '@/components/ui/card';
+import { CardContent } from '@/components/ui/card';
+import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -125,7 +126,7 @@ export function ContactSection() {
 
           {/* Right Column: Sleek Glass Contact Form (7 Cols) */}
           <div className="md:col-span-7">
-            <Card className="glass-card border-white/[0.05] h-full flex flex-col justify-between">
+            <SpotlightCard className="border-white/[0.05] h-full flex flex-col justify-between p-0">
               <CardContent className="p-6 md:p-8 space-y-5">
                 <div className="flex items-center gap-2 text-xs text-accent font-bold tracking-widest uppercase">
                   <Sparkles className="h-4 w-4 text-accent animate-pulse" />
@@ -192,7 +193,7 @@ export function ContactSection() {
                   </Button>
                 </form>
               </CardContent>
-            </Card>
+            </SpotlightCard>
           </div>
 
         </div>
