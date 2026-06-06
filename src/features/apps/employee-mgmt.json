@@ -1,0 +1,117 @@
+{
+  "appId": "employee-mgmt",
+  "appName": "Employee Onboarding",
+  "description": "Manage employee listings and department details.",
+  "layout": [
+    {
+      "type": "LayoutSection",
+      "id": "metrics-row",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        {
+          "type": "DashboardCard",
+          "id": "team-size",
+          "props": {
+            "title": "Total Employees",
+            "value": "86"
+          }
+        },
+        {
+          "type": "DashboardCard",
+          "id": "performance-index",
+          "props": {
+            "title": "Performance Index",
+            "value": "4.8"
+          }
+        },
+        {
+          "type": "DashboardCard",
+          "id": "open-headcount",
+          "props": {
+            "title": "Open Roles",
+            "value": "12"
+          }
+        }
+      ]
+    },
+    {
+      "type": "LayoutSection",
+      "id": "records-row",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        {
+          "type": "Form",
+          "id": "employee-intake",
+          "props": {
+            "title": "Add Employee",
+            "description": "",
+            "formId": "employeeForm",
+            "submitButtonText": "Save Employee",
+            "fields": [
+              {
+                "name": "name",
+                "label": "Full Name",
+                "type": "text",
+                "required": true
+              },
+              {
+                "name": "email",
+                "label": "Work Email",
+                "type": "email",
+                "required": true
+              },
+              {
+                "name": "role",
+                "label": "Job Title",
+                "type": "select",
+                "required": true,
+                "options": [
+                  { "label": "Software Engineer", "value": "Software Engineer" },
+                  { "label": "Frontend Lead", "value": "Frontend Lead" },
+                  { "label": "Database Admin", "value": "Database Admin" },
+                  { "label": "Project Manager", "value": "Project Manager" }
+                ],
+                "defaultValue": "Software Engineer"
+              },
+              {
+                "name": "salary",
+                "label": "Annual Salary ($)",
+                "type": "number",
+                "required": true
+              },
+              {
+                "name": "remote",
+                "label": "Full-Time Remote",
+                "type": "checkbox",
+                "required": false,
+                "defaultValue": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "DataTable",
+          "id": "employee-grid",
+          "props": {
+            "title": "Employee Directory",
+            "description": "",
+            "tableId": "employeeTable",
+            "tableColumns": [
+              { "key": "name", "header": "Full Name", "type": "text" },
+              { "key": "email", "header": "Email", "type": "text" },
+              { "key": "role", "header": "Title", "type": "badge" },
+              { "key": "salary", "header": "Salary ($)", "type": "number" }
+            ],
+            "actions": ["delete"]
+          }
+        }
+      ]
+    }
+  ]
+}

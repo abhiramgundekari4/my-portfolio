@@ -1,0 +1,116 @@
+{
+  "appId": "event-reg",
+  "appName": "Event RSVP Tracker",
+  "description": "Manage check-ins and track RSVPs.",
+  "layout": [
+    {
+      "type": "LayoutSection",
+      "id": "summit-stats",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        {
+          "type": "DashboardCard",
+          "id": "tickets-sold",
+          "props": {
+            "title": "Tickets Sold",
+            "value": "412"
+          }
+        },
+        {
+          "type": "DashboardCard",
+          "id": "venue-capacity",
+          "props": {
+            "title": "Remaining Seats",
+            "value": "88"
+          }
+        },
+        {
+          "type": "DashboardCard",
+          "id": "sponsor-pledges",
+          "props": {
+            "title": "Sponsorships",
+            "value": "15"
+          }
+        }
+      ]
+    },
+    {
+      "type": "LayoutSection",
+      "id": "rsvp-row",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        {
+          "type": "Form",
+          "id": "rsvp-sheet",
+          "props": {
+            "title": "RSVP Form",
+            "description": "",
+            "formId": "eventForm",
+            "submitButtonText": "Save RSVP",
+            "fields": [
+              {
+                "name": "name",
+                "label": "Full Name",
+                "type": "text",
+                "required": true
+              },
+              {
+                "name": "email",
+                "label": "Email Address",
+                "type": "email",
+                "required": true
+              },
+              {
+                "name": "ticketType",
+                "label": "Ticket Category",
+                "type": "select",
+                "required": true,
+                "options": [
+                  { "label": "General Admission", "value": "General Admission" },
+                  { "label": "VIP Access Pass", "value": "VIP Access Pass" },
+                  { "label": "Student Discount", "value": "Student Discount" }
+                ],
+                "defaultValue": "General Admission"
+              },
+              {
+                "name": "ticketsCount",
+                "label": "Tickets Count",
+                "type": "number",
+                "required": true
+              },
+              {
+                "name": "vip",
+                "label": "Require VIP Lounge",
+                "type": "checkbox",
+                "required": false,
+                "defaultValue": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "DataTable",
+          "id": "attendance-list",
+          "props": {
+            "title": "RSVP List",
+            "description": "",
+            "tableId": "eventTable",
+            "tableColumns": [
+              { "key": "name", "header": "Attendee Name", "type": "text" },
+              { "key": "email", "header": "Email", "type": "text" },
+              { "key": "ticketType", "header": "Ticket Category", "type": "badge" },
+              { "key": "ticketsCount", "header": "Quantity", "type": "number" }
+            ],
+            "actions": ["delete"]
+          }
+        }
+      ]
+    }
+  ]
+}

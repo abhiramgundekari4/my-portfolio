@@ -1,0 +1,136 @@
+\documentclass[10pt, a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────
+\usepackage[a4paper, top=0.45in, bottom=0.45in, left=0.60in, right=0.60in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+
+% ── Hyperlink styling ──────────────────────────────────────
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ── Section formatting (title + rule below) ───────────────
+\titleformat{\section}
+  {\large\bfseries}{}{0em}{}
+  [\vspace{2pt}\titlerule]
+\titlespacing*{\section}
+  {0pt}{7pt}{3pt}
+
+% ── No paragraph indent ───────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ── List settings ─────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=*,
+  itemsep=1.5pt,
+  topsep=1pt,
+  parsep=0pt
+}
+
+% ─────────────────────────────────────────────────────────
+\begin{document}
+\pagestyle{empty}
+
+% ── NAME ──────────────────────────────────────────────────
+\begin{center}
+  {\LARGE \textbf{ABHIRAM GUNDEKARI}} \\[4pt]
+  +91 7993979070 \textbar\
+  \href{mailto:abhiramgundekari2@gmail.com}{abhiramgundekari2@gmail.com} \textbar\
+  \href{https://www.linkedin.com/in/abhiram-gundekari-56a740295/}{LinkedIn} \textbar\
+  \href{https://github.com/2303A51087}{Github} \\[2pt]
+  Warangal, Telangana, India
+\end{center}
+
+\vspace{2pt}
+
+% ── PROFESSIONAL SUMMARY ──────────────────────────────────
+\section*{Professional Summary}
+\vspace{1pt}
+B.Tech Computer Science student at SR University (graduating 2027) with hands-on experience building full-stack web applications and machine learning models. Skilled in designing relational databases, integrating secure REST APIs, and solving algorithmic problems, with 150+ LeetCode challenges solved. Eager to apply my technical knowledge in backend development and data analysis to a software engineering internship.
+
+% ── EDUCATION ─────────────────────────────────────────────
+\section*{Education}
+\vspace{1pt}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \textbf{SR University} — Warangal, Telangana, India & 2023 – 2027 \\
+  Bachelor of Technology (B.Tech) in Computer Science Engineering & Expected May 2027 \\
+  CGPA: 8.09 / 10.0 & \\
+\end{tabularx}
+
+\vspace{2pt}
+\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems,
+Operating Systems, Software Engineering, Machine Learning, Object-Oriented Programming
+
+% ── EXPERIENCE ────────────────────────────────────────────
+\section*{Experience}
+\vspace{1pt}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \textbf{AICTE – EduSkills Virtual Internship} & Sep 2024 – Nov 2024 \\
+  \textit{AI/ML Virtual Intern, Remote (10 Weeks)} & \\
+\end{tabularx}
+\begin{itemize}
+  \item Trained deep learning models in Python using TensorFlow and Keras to classify image datasets during a structured internship.
+  \item Architected custom Convolutional Neural Networks (CNNs) and deployed transfer learning models, achieving a 15\% accuracy improvement over baselines across classification tasks.
+  \item Optimized neural network hyperparameters and prepared test-train data splits to increase model training speed and stability.
+\end{itemize}
+
+% ── TECHNICAL SKILLS ──────────────────────────────────────
+\section*{Technical Skills}
+\vspace{1pt}
+\begin{itemize}
+  \item \textbf{Languages:} Java, Python, JavaScript, SQL, C++
+  \item \textbf{Web \& Backend:} React.js, Node.js, Express.js, HTML5, CSS3, REST APIs, JWT
+  \item \textbf{Databases \& Tools:} MongoDB, MySQL, Git, GitHub, VS Code, Postman, AWS, Azure
+  \item \textbf{ML \& Data Libraries:} Scikit-Learn, Pandas, NumPy, TensorFlow, Power BI
+  \item \textbf{CS Fundamentals:} Data Structures, Algorithms, OOP, Operating Systems, Computer Networks, SDLC
+\end{itemize}
+
+% ── PROJECTS ──────────────────────────────────────────────
+\section*{Projects}
+\vspace{1pt}
+
+\textbf{Student Service Portal} \hfill
+\textit{MongoDB, Express.js, React.js, Node.js, JWT, REST API}
+\begin{itemize}
+  \item Engineered a secure full-stack MERN dashboard with JWT authentication, role-based access control, and REST API integrations for student task management.
+  \item Consolidated 5+ academic portal services into a singular responsive interface, reducing overall task-completion time by approximately 30\% for 200+ monthly active users.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{Loan Approval Prediction System} \hfill
+\textit{Python, Scikit-Learn, Pandas, NumPy}
+\begin{itemize}
+  \item Developed Logistic Regression and Random Forest predictive models to classify loan eligibility with 85\%+ accuracy using credit score, income, and employment features.
+  \item Streamlined data preprocessing pipelines in Pandas and NumPy, mitigating null data values by 25\% and enhancing model generalization via cross-validation.
+\end{itemize}
+
+% ── ACHIEVEMENTS ──────────────────────────────────────────
+\section*{Achievements \& Honors}
+\vspace{1pt}
+\begin{itemize}
+  \item Mastered core algorithmic complexities and sorting paradigms, successfully solving \textbf{150+ problems} on LeetCode with daily consistent submissions.
+  \item Competed in competitive coding challenges in the national \textbf{BIG CODE Challenge 2026} organized by Google, optimizing algorithms under strict runtime constraints.
+  \item Collaborated in a multidisciplinary engineering team to design and present a functional software prototype at the \textbf{Smart India Hackathon (SIH)}.
+  \item Analyzed high-dimensional datasets using Python and Power BI to construct interactive executive-style visualization dashboards.
+\end{itemize}
+
+% ── CERTIFICATIONS ────────────────────────────────────────
+\section*{Certifications}
+\vspace{1pt}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \textbf{AWS Certified Cloud Practitioner} & Amazon Web Services \textbar\ 2024 \\
+  \textbf{Microsoft Certified: Azure AI Fundamentals (AI-900)} & Microsoft \textbar\ 2024 \\
+\end{tabularx}
+
+\end{document}

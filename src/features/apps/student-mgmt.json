@@ -1,0 +1,116 @@
+{
+  "appId": "student-mgmt",
+  "appName": "Student Management",
+  "description": "Manage student details and track departments.",
+  "layout": [
+    {
+      "type": "LayoutSection",
+      "id": "stats-row",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        {
+          "type": "DashboardCard",
+          "id": "total-students",
+          "props": {
+            "title": "Total Students",
+            "value": "1,248"
+          }
+        },
+        {
+          "type": "DashboardCard",
+          "id": "average-gpa",
+          "props": {
+            "title": "Average GPA",
+            "value": "3.64"
+          }
+        },
+        {
+          "type": "DashboardCard",
+          "id": "active-sections",
+          "props": {
+            "title": "Active Classrooms",
+            "value": "42"
+          }
+        }
+      ]
+    },
+    {
+      "type": "LayoutSection",
+      "id": "content-row",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        {
+          "type": "Form",
+          "id": "student-registration",
+          "props": {
+            "title": "Register Student",
+            "description": "",
+            "formId": "studentForm",
+            "submitButtonText": "Register",
+            "fields": [
+              {
+                "name": "name",
+                "label": "Full Name",
+                "type": "text",
+                "required": true
+              },
+              {
+                "name": "email",
+                "label": "Email Address",
+                "type": "email",
+                "required": true
+              },
+              {
+                "name": "age",
+                "label": "Age",
+                "type": "number",
+                "required": true
+              },
+              {
+                "name": "department",
+                "label": "Department",
+                "type": "select",
+                "required": true,
+                "options": [
+                  { "label": "Computer Science", "value": "Computer Science" },
+                  { "label": "Electrical Engineering", "value": "Electrical Engineering" },
+                  { "label": "Data Science", "value": "Data Science" },
+                  { "label": "Business Admin", "value": "Business Admin" }
+                ],
+                "defaultValue": "Computer Science"
+              },
+              {
+                "name": "notes",
+                "label": "Notes",
+                "type": "textarea",
+                "required": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "DataTable",
+          "id": "student-list",
+          "props": {
+            "title": "Student List",
+            "description": "",
+            "tableId": "studentTable",
+            "tableColumns": [
+              { "key": "name", "header": "Full Name", "type": "text" },
+              { "key": "email", "header": "Email", "type": "text" },
+              { "key": "age", "header": "Age", "type": "number" },
+              { "key": "department", "header": "Department", "type": "badge" }
+            ],
+            "actions": ["delete"]
+          }
+        }
+      ]
+    }
+  ]
+}
