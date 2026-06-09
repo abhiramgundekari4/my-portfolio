@@ -1,14 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { SectionTitle } from '@/components/ui/section-title';
-import { CardContent } from '@/components/ui/card';
-import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { portfolioData } from '@/lib/data';
-import { Mail, Phone, Linkedin, Github, MessageSquare, Send, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Send, CheckCircle2 } from 'lucide-react';
 import { Icons } from '@/components/icons';
 import { useToast } from '@/hooks/use-toast';
 
@@ -94,7 +91,6 @@ export function ContactSection() {
           description: "Thank you for reaching out. Your message has been sent to Abhiram.",
         });
 
-        // Reset success status after a delay
         setTimeout(() => setIsSent(false), 5000);
       } else {
         throw new Error(result.message || "Failed to submit message");
@@ -110,120 +106,104 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="container mx-auto scroll-mt-20 px-4 py-20">
-      <SectionTitle number="07">Get In Touch</SectionTitle>
-      
-      <div className="mx-auto max-w-5xl">
-        <div className="grid gap-10 md:grid-cols-12 items-stretch">
-          
-          {/* Left Column: Info & Social Links (5 Cols) */}
-          <div className="md:col-span-5 flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
-              <h3 className="font-headline text-2xl font-black text-slate-900 flex items-center gap-2">
-                <span>Let&apos;s Create Something Great</span>
-              </h3>
-              <p className="text-sm leading-relaxed text-slate-600">
+    <section id="contact" className="relative scroll-mt-20 px-6 py-24 border-t border-slate-100 bg-white">
+      <div className="max-w-[1100px] mx-auto w-full">
+        <span className="block font-sans text-[0.78rem] font-bold uppercase tracking-[0.08em] text-slate-400 mb-8">
+          07 — Contact
+        </span>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
+          {/* Left Column: Description & Socials */}
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <h2 className="font-sans text-[2rem] font-bold tracking-tight text-slate-900 leading-snug">
+                Let&apos;s Create Something Great
+              </h2>
+              <p className="text-[1.05rem] text-slate-500 leading-relaxed font-sans">
                 I am actively looking for new internship and developer opportunities. Whether you have a question, want to discuss software systems, or just say hello, my inbox is open!
               </p>
             </div>
 
-            <div className="grid gap-3">
+            <div className="flex flex-col gap-4">
               {contactLinks.map(({ icon: Icon, label, href, text }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block"
+                  className="flex items-center gap-4 p-[1.2rem_1.5rem] bg-slate-50 border border-slate-200/80 rounded-2xl font-sans text-[0.92rem] font-bold text-slate-950 transition-all duration-300 hover:translate-x-1.5 hover:border-slate-900"
                 >
-                  <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4.5 transition-all duration-200 hover:border-slate-300 hover:bg-slate-50/50 shadow-sm">
-                    <div className="h-10 w-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-800">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">{label}</h4>
-                      <p className="text-sm font-semibold text-slate-900 group-hover:text-slate-700 mt-0.5 transition-colors line-clamp-1">{text}</p>
-                    </div>
-                  </div>
+                  <Icon className="h-[18px] w-[18px] text-slate-900" />
+                  <span>{text}</span>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Right Column: Sleek Contact Form (7 Cols) */}
-          <div className="md:col-span-7">
-            <SpotlightCard className="border-slate-200 bg-white h-full flex flex-col justify-between p-0 shadow-sm">
-              <CardContent className="p-6 md:p-8 space-y-5">
-                <div className="flex items-center gap-2 text-xs text-slate-500 font-bold tracking-widest uppercase">
-                  <span>Send direct message</span>
-                </div>
-                
-                <form onSubmit={handleSubmit} className="space-y-4.5">
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Your Name</label>
-                      <Input
-                        type="text"
-                        placeholder="Abhiram Gundekari"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="bg-white border-slate-200 focus:border-slate-400 transition-all rounded-lg text-slate-900"
-                      />
-                    </div>
-                    
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Your Email</label>
-                      <Input
-                        type="email"
-                        placeholder="name@domain.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="bg-white border-slate-200 focus:border-slate-400 transition-all rounded-lg text-slate-900"
-                      />
-                    </div>
-                  </div>
+          {/* Right Column: Form */}
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-slate-50/50 border border-slate-200/80 p-8 rounded-3xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2">
+                <label className="text-[0.78rem] font-bold uppercase tracking-[0.05em] text-slate-400 font-sans">Your Name</label>
+                <Input
+                  type="text"
+                  placeholder="Abhiram Gundekari"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="bg-white border-slate-200 focus:border-slate-400 focus:ring-0 transition-all rounded-xl text-slate-900 p-6"
+                />
+              </div>
+              
+              <div className="flex flex-col gap-2">
+                <label className="text-[0.78rem] font-bold uppercase tracking-[0.05em] text-slate-400 font-sans">Your Email</label>
+                <Input
+                  type="email"
+                  placeholder="name@domain.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="bg-white border-slate-200 focus:border-slate-400 focus:ring-0 transition-all rounded-xl text-slate-900 p-6"
+                />
+              </div>
+            </div>
 
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Your Message</label>
-                    <Textarea
-                      rows={5}
-                      placeholder="Hi Abhiram, I came across your Python and SQL developer portfolio..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="bg-white border-slate-200 focus:border-slate-400 transition-all rounded-lg resize-none leading-relaxed text-slate-900"
-                    />
-                  </div>
+            <div className="flex flex-col gap-2">
+              <label className="text-[0.78rem] font-bold uppercase tracking-[0.05em] text-slate-400 font-sans">Your Message</label>
+              <Textarea
+                rows={5}
+                placeholder="Hi Abhiram, I came across your Python and SQL developer portfolio..."
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="bg-white border-slate-200 focus:border-slate-400 focus:ring-0 transition-all rounded-xl resize-none leading-relaxed text-slate-900 p-4"
+              />
+            </div>
 
-                  <Button 
-                    type="submit" 
-                    disabled={isSending || isSent}
-                    className="w-full bg-slate-900 text-white hover:bg-slate-800 transition-colors mt-2 rounded-lg py-5"
-                  >
-                    {isSending ? (
-                      <div className="flex items-center gap-2">
-                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-background border-t-transparent" />
-                        <span>Transmitting Securely...</span>
-                      </div>
-                    ) : isSent ? (
-                      <div className="flex items-center gap-2 text-emerald-600">
-                        <CheckCircle2 className="h-5 w-5" />
-                        <span>Message Dispatched!</span>
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-2">
-                        <Send className="h-4 w-4" />
-                        <span>Send Message</span>
-                      </div>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </SpotlightCard>
-          </div>
-
+            <Button 
+              type="submit" 
+              disabled={isSending || isSent}
+              className="w-full bg-slate-900 text-white hover:bg-slate-800 transition-colors mt-2 rounded-xl py-6 font-bold font-sans tracking-wide"
+            >
+              {isSending ? (
+                <span className="flex items-center gap-2">
+                  <div className="h-4 w-4 animate-spin rounded-full border-2 border-background border-t-transparent" />
+                  Transmitting Securely...
+                </span>
+              ) : isSent ? (
+                <span className="flex items-center gap-2 text-emerald-400">
+                  <CheckCircle2 className="h-5 w-5" />
+                  Message Dispatched!
+                </span>
+              ) : (
+                <span className="flex items-center gap-2">
+                  <Send className="h-4 w-4" />
+                  Send Message
+                </span>
+              )}
+            </Button>
+          </form>
         </div>
       </div>
     </section>
   );
 }
+
 

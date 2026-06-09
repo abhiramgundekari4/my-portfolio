@@ -1,45 +1,60 @@
 import { SectionTitle } from '@/components/ui/section-title';
-import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SpotlightCard } from '@/components/ui/spotlight-card';
-import { portfolioData } from '@/lib/data';
 
 export function SkillsSection() {
+  const categories = [
+    {
+      title: "Languages & Databases",
+      skills: ['Python', 'JavaScript', 'SQL', 'MongoDB', 'MySQL', 'C', 'HTML', 'CSS'],
+      span: "col-span-1 md:col-span-2",
+      bg: "bg-slate-50/50"
+    },
+
+    {
+      title: "Frameworks & Libraries",
+      skills: ['MERN Stack', 'React', 'Node.js', 'Express', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'NumPy'],
+      span: "col-span-1",
+      bg: "bg-white"
+    },
+    {
+      title: "Core Concepts & Tools",
+      skills: ['Data Structures & Algorithms (150+ Solved)', 'Machine Learning', 'REST APIs', 'DBMS', 'OOP', 'Git & GitHub'],
+      span: "col-span-1 md:col-span-3",
+      bg: "bg-slate-50/50"
+    }
+  ];
+
   return (
-    <section id="skills" className="container mx-auto scroll-mt-20 px-4 py-16">
+    <section id="skills" className="container mx-auto scroll-mt-20 px-4 py-20 border-t border-slate-100">
       <SectionTitle number="02">Technical Skills</SectionTitle>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-        {portfolioData.skills.map((skillCategory, index) => {
-          const Icon = skillCategory.icon;
-          return (
-            <SpotlightCard 
-              key={index} 
-              className="border border-slate-200 bg-white shadow-sm flex flex-col glass-card-hover"
-            >
-              <CardHeader className="flex flex-row items-center gap-4 pb-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 border border-slate-200 text-slate-800">
-                  <Icon className="h-5 w-5 text-slate-800" />
-                </div>
-                <CardTitle className="font-headline text-lg font-bold tracking-tight text-slate-900">
-                  {skillCategory.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow pt-2">
-                <div className="flex flex-wrap gap-2">
-                  {skillCategory.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </SpotlightCard>
-          );
-        })}
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {categories.map((cat, idx) => (
+          <SpotlightCard
+            key={idx}
+            className={`p-6 sm:p-8 flex flex-col justify-between border border-slate-200 bg-white shadow-sm glass-card-hover ${cat.span}`}
+          >
+            <div className="space-y-4">
+              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-widest font-mono">
+                {cat.title}
+              </h3>
+              
+              <div className="flex flex-wrap gap-2 pt-2">
+                {cat.skills.map((skill, sIdx) => (
+                  <span
+                    key={sIdx}
+                    className="inline-flex items-center rounded border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-200 cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </SpotlightCard>
+        ))}
       </div>
     </section>
+
   );
 }
 

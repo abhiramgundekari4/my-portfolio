@@ -23,11 +23,25 @@ export function LeetCodeStats() {
 
   return (
     <div className="mx-auto max-w-4xl space-y-8">
-      <div className="grid gap-6 md:grid-cols-12">
+      {/* Highlight solved concepts directly inside a small key points list */}
+      <Card className="border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="flex flex-wrap justify-between items-center gap-3">
+          <span className="text-xs font-bold text-slate-800 font-mono">[Solved Concepts]:</span>
+          <div className="flex flex-wrap gap-2">
+            {['Arrays & Hashing', 'Two Pointers', 'Sliding Window', 'Binary Search', 'Trees & Graphs', 'DP & Recursion'].map((tag) => (
+              <span key={tag} className="text-[10px] font-bold font-mono px-2 py-0.5 rounded bg-slate-50 border border-slate-200 text-slate-600">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Card>
+
+      <div className="grid gap-6 md:grid-cols-12 justify-center">
         
-        {/* Radial Progress Analytics Card (7 Cols) */}
-        <Card className="border border-slate-200 bg-white shadow-sm md:col-span-7 overflow-hidden relative">
-          <CardContent className="p-6 md:p-8 flex flex-col sm:flex-row items-center gap-8">
+        {/* Radial Progress Analytics Card */}
+        <Card className="border border-slate-200 bg-white shadow-sm md:col-span-12 overflow-hidden relative">
+          <CardContent className="p-6 md:p-8 flex flex-col sm:flex-row items-center gap-8 justify-center">
             
             {/* SVG Circular Progress Ring */}
             <div className="relative h-32 w-32 flex-shrink-0 flex items-center justify-center">
@@ -41,11 +55,11 @@ export function LeetCodeStats() {
                 {/* Active progress circle */}
                 <circle 
                   cx="64" cy="64" r="50" 
-                  className="stroke-slate-850 transition-all duration-1000 ease-out" 
+                  className="stroke-slate-800" 
                   strokeWidth="8" 
                   fill="transparent"
                   strokeDasharray="314.16"
-                  strokeDashoffset={314.16 - (314.16 * totalPercentage) / 100}
+                  strokeDashoffset={0}
                   strokeLinecap="round"
                 />
               </svg>
@@ -56,61 +70,20 @@ export function LeetCodeStats() {
               </div>
             </div>
 
-            <div className="space-y-3.5 flex-1">
-              <div>
-                <h4 className="font-bold text-lg text-slate-900 flex items-center gap-2">
-                  <Target className="h-5 w-5 text-slate-800" />
-                  <span>Problem Solving Metrics</span>
-                </h4>
-                <p className="text-xs text-slate-500 mt-1">
-                  Actively learning & expanding logic by mapping standard data structures and optimizing time/space complexities.
-                </p>
-              </div>
-              <div className="flex items-center gap-4 text-xs font-semibold text-slate-600">
-                <div className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-slate-900" />
-                  <span>Target: {targetTotal}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-slate-400" />
-                  <span>Progress: {Math.round(totalPercentage)}%</span>
-                </div>
-              </div>
-            </div>
-
-          </CardContent>
-        </Card>
-
-        {/* Global Standing Rank Card (5 Cols) */}
-        <Card className="border border-slate-200 bg-white shadow-sm md:col-span-5 flex flex-col justify-between">
-          <CardContent className="p-6 md:p-8 flex flex-col justify-between h-full space-y-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="rounded-xl bg-slate-100 border border-slate-200 p-3 text-slate-850">
-                  <Trophy className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-slate-450 uppercase tracking-widest">Global Rank</p>
-                  <p className="text-2xl font-black text-slate-900 mt-0.5">{stats.rank}</p>
-                </div>
-              </div>
-              <Button asChild variant="outline" size="icon" className="h-9 w-9 rounded-full border-slate-200 hover:bg-slate-50 transition-colors">
-                <a href={portfolioData.socials.leetcode} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="h-4.5 w-4.5" />
-                </a>
-              </Button>
-            </div>
-            
-            <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2">
-              <Star className="h-4 w-4 text-slate-800 flex-shrink-0" />
-              <p className="text-[11px] text-slate-500 leading-normal">
-                Continuous practice on HashMaps, Trees, Graphs, Sorting & Two-Pointer patterns.
+            <div className="space-y-2 text-center sm:text-left">
+              <h4 className="font-bold text-lg text-slate-900">
+                Problem Solving Metrics
+              </h4>
+              <p className="text-xs text-slate-555 max-w-md">
+                Actively learning & expanding logic by mapping standard data structures and optimizing time/space complexities.
               </p>
             </div>
+
           </CardContent>
         </Card>
 
       </div>
+
 
       {/* Category distribution bars */}
       <div className="grid gap-6 sm:grid-cols-3">

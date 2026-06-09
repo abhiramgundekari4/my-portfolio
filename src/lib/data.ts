@@ -3,8 +3,10 @@ import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
   name: 'Abhiram Gundekari',
-  title: 'B.Tech CS Student | Full-Stack & Machine Learning Developer',
-  summary: 'B.Tech Computer Science student (Graduating 2027) with skills in Java, Python, JavaScript, SQL, Machine Learning, Data Structures & Algorithms, DBMS, OOP, and Software Development concepts. Experienced in building full-stack web applications and machine learning projects using MERN stack, REST APIs, TensorFlow, Scikit-Learn, MongoDB, and MySQL. Strong problem-solving abilities demonstrated through 150+ LeetCode problems and seeking internship opportunities to apply technical skills in real-world environments.',
+  title: 'B.Tech CS Student | Adaptable Software Engineer & Data Analyst',
+
+  summary: 'B.Tech Computer Science student (Graduating 2027) with strong foundations in Software Development, Data Analytics, Full-Stack engineering, and Machine Learning. Highly adaptable and ready to enter any of these fields as a fresher. Skilled in Python, JavaScript, SQL, DBMS, OOP, and Data Structures & Algorithms. Experienced in building full-stack MERN web apps, handling relational and non-relational database architectures (MySQL, MongoDB), and constructing predictive machine learning models (TensorFlow, Scikit-Learn). Passionate about applying problem-solving skills to drive software efficiency and extract data insights.',
+
   contact: {
     email: 'abhiramgundekari4@gmail.com',
     phone: '7993979070',
@@ -18,8 +20,9 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Languages & Databases',
       icon: Code,
-      skills: ['Java', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'MySQL', 'C', 'HTML', 'CSS'],
+      skills: ['Python', 'JavaScript', 'SQL', 'MongoDB', 'MySQL', 'C', 'HTML', 'CSS'],
     },
+
     {
       title: 'Frameworks & Libraries',
       icon: BrainCircuit,
@@ -113,8 +116,9 @@ export const portfolioData: PortfolioData = {
     {
       year: "Early 2024",
       title: "Mastering DSA & OOP",
-      desc: "Delved into standard data structures, algorithmic complexities, and clean object-oriented concepts (Encapsulation, Inheritance, Abstraction, Polymorphism) in Java and Python."
+      desc: "Delved into standard data structures, algorithmic complexities, and clean object-oriented concepts (Encapsulation, Inheritance, Abstraction, Polymorphism) in C and Python."
     },
+
     {
       year: "Mid 2024",
       title: "Venturing into Full-Stack MERN",
@@ -127,8 +131,8 @@ export const portfolioData: PortfolioData = {
     },
     {
       year: "2025",
-      title: "TensorFlow & 150+ LeetCode",
-      desc: "Expanded into AI/ML with TensorFlow and Scikit-Learn. Built predictive analytics pipelines and achieved a milestone of 150+ LeetCode problems solved consistently."
+      title: "LeetCode Milestones",
+      desc: "Solved over 245+ algorithmic problems on arrays, hash maps, trees, and logic optimizations to sharpen logical reasoning."
     },
     {
       year: "Now (2026)",
@@ -137,3 +141,4 @@ export const portfolioData: PortfolioData = {
     }
   ]
 };
+

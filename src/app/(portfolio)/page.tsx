@@ -24,12 +24,6 @@ export default function PortfolioPage() {
                 <AboutSection />
                 <SkillsSection />
                 <ProjectsSection />
-                
-                <section className="container mx-auto px-4 py-16 border-t border-slate-100">
-                    <SectionTitle number="04">LeetCode Stats & Activity</SectionTitle>
-                    <LeetCodeStats />
-                </section>
-
                 <JourneySection />
                 <AcademicsSection />
                 <ContactSection />
@@ -38,3 +32,4 @@ export default function PortfolioPage() {
         </div>
     );
 }
+

@@ -42,17 +42,8 @@ export function JourneySection() {
                   </div>
                 </div>
 
-                {/* Timeline Card */}
-                <div className="grid gap-2 sm:grid-cols-12 items-start">
-                  {/* Left Column: Year Badge */}
-                  <div className="sm:col-span-2 pt-1.5">
-                    <span className="inline-block px-2.5 py-1 text-xs font-bold font-headline uppercase tracking-wider text-slate-800 bg-slate-100 border border-slate-200 rounded-md">
-                      {item.year}
-                    </span>
-                  </div>
-
                   {/* Right Column: Premium Card Content */}
-                  <div className="sm:col-span-10">
+                  <div className="w-full">
                     <SpotlightCard className="border-slate-200 p-5 sm:p-6 bg-white shadow-sm hover:border-slate-300 transition-colors">
                       <div className="flex flex-col space-y-2">
                         <h4 className="font-headline text-lg font-black text-slate-900 group-hover:text-slate-700 transition-colors duration-200">
@@ -64,7 +55,7 @@ export function JourneySection() {
                       </div>
                     </SpotlightCard>
                   </div>
-                </div>
+
 
               </div>
             );

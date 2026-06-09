@@ -38,12 +38,12 @@ export function HeroSection({ name, title }: HeroSectionProps) {
           </div>
           
           <div className="space-y-3">
-            <h1 className="font-headline text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
-              Hi, I&apos;m{' '}
-              <span className="block mt-1 font-black text-slate-950">
+            <h1 className="font-headline text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl uppercase">
+              <span className="block mt-1 font-serif italic normal-case text-slate-950 font-semibold">
                 {name}
               </span>
             </h1>
+
             
             <p className="font-headline text-lg sm:text-xl md:text-2xl font-normal text-slate-600">
               {title}
