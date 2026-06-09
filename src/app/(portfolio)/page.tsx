@@ -22,12 +22,13 @@ export default function PortfolioPage() {
                   title={portfolioData.title} 
                 />
                 <AboutSection />
-                <SkillsSection />
                 <ProjectsSection />
+                <SkillsSection />
                 <JourneySection />
                 <AcademicsSection />
                 <ContactSection />
             </main>
+
             <SiteFooter />
         </div>
     );

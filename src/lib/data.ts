@@ -3,7 +3,8 @@ import type { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
   name: 'Abhiram Gundekari',
-  title: 'B.Tech CS Student | Adaptable Software Engineer & Data Analyst',
+  title: 'Full-Stack Developer Focused on Software Engineering, AI, and Data Systems',
+
 
   summary: 'B.Tech Computer Science student (Graduating 2027) with strong foundations in Software Development, Data Analytics, Full-Stack engineering, and Machine Learning. Highly adaptable and ready to enter any of these fields as a fresher. Skilled in Python, JavaScript, SQL, DBMS, OOP, and Data Structures & Algorithms. Experienced in building full-stack MERN web apps, handling relational and non-relational database architectures (MySQL, MongoDB), and constructing predictive machine learning models (TensorFlow, Scikit-Learn). Passionate about applying problem-solving skills to drive software efficiency and extract data insights.',
 
@@ -44,13 +45,14 @@ export const portfolioData: PortfolioData = {
       liveUrl: 'https://lnkd.in/gUJ9-PPf',
     },
     {
-      title: 'Smart Task Manager',
+      title: 'Academic Task Planner',
       description: 'A full-stack student productivity application built using the MERN (MongoDB, Express, React, Node) stack. It streamlines academic planning by allowing users to create, prioritize, and track tasks. Features real-time deadline monitoring, priority organization, and progress analytics on an interactive dashboard.',
       tags: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack'],
       image: 'project-task-manager',
       githubUrl: 'https://github.com/abhiramgundekari4',
-      liveUrl: '/task-manager',
+      liveUrl: 'https://academic-task-planner.vercel.app/',
     },
+
     {
       title: 'Student Services Portal',
       description: 'A dedicated web portal developed using HTML and CSS. This platform streamlines university operations by integrating external academic websites and resources into a single, cohesive interface for better accessibility.',
