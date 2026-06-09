@@ -39,11 +39,6 @@ export function ProjectsSection() {
   const featuredProject = portfolioData.projects.find(p => p.title === 'Academic Task Planner');
   const otherProjects = portfolioData.projects.filter(p => p.title !== 'Academic Task Planner');
 
-  const smartTaskManagerImg = "/profile.jpg"; 
-  const ragChatbotImg = "/profile.jpg";
-  const studentPortalImg = "/profile.jpg";
-
-
   return (
     <section id="projects" className="relative scroll-mt-20 px-6 py-24 border-t border-slate-100 bg-white">
       <div className="max-w-[1100px] mx-auto w-full z-10 relative">
@@ -54,30 +49,17 @@ export function ProjectsSection() {
           Featured Engineering Work
         </h2>
 
-        {/* Featured Project Banner (Smart Task Manager) */}
+        {/* Featured Project Banner (Academic Task Planner) */}
         {featuredProject && (
-          <div className="mb-16 bg-[#0f172a] text-white rounded-[32px] overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-xl border border-slate-800 hover:-translate-y-1.5 transition-all duration-300">
-            {/* Left Column: Image */}
-            <div className="lg:col-span-5 relative min-h-[300px] aspect-video lg:aspect-auto border-r border-slate-800">
-              <Image
-                src={smartTaskManagerImg}
-                alt={featuredProject.title}
-                fill
-                className="object-cover opacity-90"
-              />
-              <div className="absolute top-6 left-6 z-20">
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white text-slate-900 shadow-lg">
-                  🏆 Featured Project
-                </span>
-              </div>
-            </div>
-
-            {/* Right Column: Copy & Details */}
-            <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between gap-6">
+          <div className="mb-16 bg-[#0f172a] text-white rounded-[32px] overflow-hidden shadow-xl border border-slate-800 hover:-translate-y-1.5 transition-all duration-300">
+            <div className="p-8 md:p-12 flex flex-col justify-between gap-6">
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white text-slate-900 shadow-lg mr-2">
+                    🏆 Featured Project
+                  </span>
                   {featuredProject.tags.map(tag => (
-                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">
+                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-slate-800 text-slate-350 px-2.5 py-1 rounded-md border border-slate-700">
                       {tag}
                     </span>
                   ))}
@@ -92,7 +74,7 @@ export function ProjectsSection() {
                 </p>
 
                 {/* Impact Bullet Features */}
-                <ul className="flex flex-col gap-2.5 text-xs text-slate-300 font-semibold pt-2 list-none m-0 p-0">
+                <ul className="flex flex-col gap-2.5 text-xs text-slate-350 font-semibold pt-2 list-none m-0 p-0">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0" />
                     <span>MERN Stack (MongoDB, Express, React, Node.js) Integration</span>
@@ -137,24 +119,12 @@ export function ProjectsSection() {
           {otherProjects.map((project, index) => {
             const details = getProjectDetails(project.title, project.description);
             const isRAG = project.title === 'AI RAG Chatbot';
-            const projImg = isRAG ? ragChatbotImg : studentPortalImg;
 
             return (
               <div 
                 key={index} 
                 className="bg-slate-50/50 border border-slate-200/80 rounded-[24px] overflow-hidden flex flex-col transition-all duration-300 hover:border-slate-900 hover:-translate-y-1.5 hover:bg-white hover:shadow-lg"
               >
-                {/* Project Image Section */}
-                <div className="relative aspect-video overflow-hidden border-b border-slate-200/80">
-                  <Image
-                    src={projImg}
-                    alt={project.title}
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                
                 {/* Body Content */}
                 <div className="p-8 flex flex-col gap-5 flex-grow">
                   {/* Tags */}
@@ -246,15 +216,6 @@ export function ProjectsSection() {
                         </DialogHeader>
                         
                         <div className="space-y-5 pt-3">
-                          <div className="relative aspect-video overflow-hidden rounded-xl border border-slate-200 shadow-sm">
-                            <Image
-                              src={projImg}
-                              alt={project.title}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                          
                           <div className="space-y-3">
                             <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Project Overview</h4>
                             <p className="text-sm text-slate-600 leading-relaxed font-sans">
@@ -327,6 +288,9 @@ export function ProjectsSection() {
     </section>
   );
 }
+
+
+
 
 
 
