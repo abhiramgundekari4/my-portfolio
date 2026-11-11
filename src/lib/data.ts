@@ -8,6 +8,7 @@ export const portfolioData: PortfolioData = {
 
   summary: 'B.Tech Computer Science student (Graduating 2027) with strong foundations in Software Development, Data Analytics, Full-Stack engineering, and Machine Learning. Highly adaptable and ready to enter any of these fields as a fresher. Skilled in Python, JavaScript, SQL, DBMS, OOP, and Data Structures & Algorithms. Experienced in building full-stack MERN web apps, handling relational and non-relational database architectures (MySQL, MongoDB), and constructing predictive machine learning models (TensorFlow, Scikit-Learn). Passionate about applying problem-solving skills to drive software efficiency and extract data insights.',
 
+  resumeUrl: '/resume.pdf',
   contact: {
     email: 'abhiramgundekari4@gmail.com',
     phone: '7993979070',

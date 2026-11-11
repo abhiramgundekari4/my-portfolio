@@ -52,6 +52,7 @@ export type PortfolioData = {
   name: string;
   title: string;
   summary: string;
+  resumeUrl: string;
   contact: {
     email: string;
     phone: string;

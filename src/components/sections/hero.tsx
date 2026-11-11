@@ -56,7 +56,7 @@ export function HeroSection({ name, title }: HeroSectionProps) {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center pt-2">
             <Button asChild size="lg" className="bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-              <a href="https://drive.google.com/file/d/1rR5YQibv9Kl8DLhFTy_SUxPWB7l6POqJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href={portfolioData.resumeUrl} target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-4 w-4" />
                 View Resume
               </a>

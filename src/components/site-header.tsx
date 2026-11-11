@@ -73,7 +73,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Button asChild size="sm" className="bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-              <a href="https://drive.google.com/file/d/1rR5YQibv9Kl8DLhFTy_SUxPWB7l6POqJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href={portfolioData.resumeUrl} target="_blank" rel="noopener noreferrer">Resume</a>
             </Button>
           </nav>
 
@@ -112,7 +112,7 @@ export function SiteHeader() {
                   </nav>
                   <div className="mt-auto pb-8">
                     <Button asChild className="w-full bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                      <a href="https://drive.google.com/file/d/1rR5YQibv9Kl8DLhFTy_SUxPWB7l6POqJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+                      <a href={portfolioData.resumeUrl} target="_blank" rel="noopener noreferrer">Resume</a>
                     </Button>
                   </div>
                 </div>
